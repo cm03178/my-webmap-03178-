@@ -25,14 +25,12 @@
       "Traitement de données topographiques",
       "Traitement photogrammétrique",
       "DAO",
-      "Opérations foncières",
       "Traitement Numérique des Images",
       "Gestion de base de données",
-      "Gestion de Systèmes d'Informations Géographiques (SIG)",
+      "Gestion de SIG",
       "Gestion de projet",
       "Opérations foncières",
       "Aménagement urbain",
-      "Travail collaboratif",
       "Capacité à travailler en sécurité"
     ],
     "description_mission": null,
@@ -45,7 +43,7 @@
     "softwares": [
       "AutoCAD",
       "Covadis",
-      "Qgis",
+      "QGIS",
       "Leica Cyclone",
       "Leica Infinity",
       "Agisoft Metashape",
@@ -91,14 +89,12 @@
       "Traitement de données topographiques",
       "Traitement photogrammétrique",
       "DAO",
-      "Aménagement",
       "Opérations foncières",
       "Gestion de projet",
-      "Opérations foncières",
       "Travail collaboratif",
       "Capacité à travailler en sécurité"
     ],
-    "description_mission": null,
+    "description_mission": "Formation aux métiers de la topographie, de la géomatique et de la modélisation numérique. Acquisition des compétences techniques et théoriques pour les relevés, le traitement de données et la production de plans.",
     "materiels": [
       "Stations totales Leica",
       "Scanners 3D Leica",
@@ -141,8 +137,7 @@
     ],
     "description_mission": [
       "Stagiaire bénévole sur une mission (D10) sous l'égide de l'École française d'Athènes, dirigée par M.Jean-Marc LUCE, sur le site archéologique de Delphes (Sanctuaire d'Apollon), en Grèce.",
-      "Relevé de points d'intérêts à l'aide d'un récepteur GNSS (emprises, hauteurs des murs d'enceintes, Hi-Target V200)",
-      "https://doi.org/10.4000/14bdb"
+      "Relevé de points d'intérêts à l'aide d'un récepteur GNSS (emprises, hauteurs des murs d'enceintes, Hi-Target V200)."
     ],
     "materiels": [
       "Récepteur GNSS Hi-Target V200"
@@ -180,14 +175,14 @@
       "DAO",
       "Traitement Numérique des Images",
       "Gestion de base de données",
-      "Collaboration pluridisciplinaire",
+      "Travail collaboratif",
       "Capacité à travailler en sécurité"
     ],
     "description_mission": [
       "Stagiaire bénévole sur une mission (D28) sous l'égide de l'École française d'Athènes et dirigée par Mme Sandrine HUBER, sur le site archéologique de Delphes (Terasses de Marmaria), en Grèce.",
-      "Relevé de points d'intérêt (limites de sondages, matériel archéologique détérré, unités stratigraphiques, Leica TS06+) au sein des sondages de fouilles, répertoriés dans un SIG, faciltant les études menées par les differents parties",
+      "Relevé de points d'intérêt (limites de sondages, matériel archéologique déterré, unités stratigraphiques, Leica TS06+) au sein des sondages de fouilles, répertoriés dans un SIG, facilitant les études menées par les différentes parties.",
       "Modélisation 3D des sondages par photogrammétrie dans le but de documenter les couches sédimentaires et le matériel archéologique découvert.",
-      "Archivage des données (coordonnées, nature du point, identification stratigraphique, identification du matériel, orthoimages), permet de filtrer et d'obtenir des données spécifiques",
+      "Archivage des données (coordonnées, nature du point, identification stratigraphique, identification du matériel, orthoimages), permettant de filtrer et d'obtenir des données spécifiques.",
       "Lien vers le rapport officiel de l'EfA : https://urlr.me/rPsKbC"
     ],
     "materiels": [
@@ -242,15 +237,15 @@
       "Milieu Extrême"
     ],
     "competences": [
-      "Manipulation d'instruments topopgraphiques",
+      "Manipulation d'instruments topographiques",
       "Initiation aux techniques de relevés aériens par drone DJI Mavic Pro",
       "Capacité à travailler en sécurité",
       "Capacité à gérer l'effort physique",
-      "Collaboration pluridisciplinaire"
+      "Travail collaboratif"
     ],
     "description_mission": [
-      "Organisation et préparation du matériel d'expédition (trépieds, antennes GNSS, scanner 3D) pour le portage et l'ascension (1300m D+) jusqu'au Refuge des Estagnous (2246m)",
-      "Déploiement d'un récepteur GNSS (base, Topcon HiPer VR) au col du Valiérat et descente en cordée vers le site glaciaire, sous la supervision de guides de haute montagne",
+      "Organisation et préparation du matériel d'expédition (trépieds, antennes GNSS, scanner 3D) pour le portage et l'ascension (1300m D+) jusqu'au Refuge des Estagnous (2246m).",
+      "Déploiement d'un récepteur GNSS (base, Topcon HiPer VR) au col du Valiérat et descente en cordée vers le site glaciaire, sous la supervision de guides de haute montagne.",
       "Relevé des points, à l'aide d'un scanner 3D Topcon GLS-2000, d'un récepteur GNSS (mobile, rattachemment du scan et de la prise de vue, Topcon HiPer VR) ainsi que d'un drone (DJI Mavic Pro), sur la surface du glacier afin de mesurer son évolution (glissement, fonte, crevasses)",
       "Collaboration au sein d'une équipe pluridisciplinaire en milieu hostile (Géomètres Experts, Guides de haute montagne, Géologues, Représentants Téria/Topcon)"
     ],
@@ -315,10 +310,10 @@
       "Traitement de données"
     ],
     "competences": [
-      "Relevé topographiques",
+      "Relevé topographique",
       "Relevé photogrammétrique",
       "Traitement de données topographiques",
-      "Traitement de données photogrammétriques",
+      "Traitement photogrammétrique",
       "Gestion de projet",
       "Voirie et Réseaux Divers (VRD)",
       "Travail collaboratif",
@@ -326,9 +321,9 @@
       "Pédagogie"
     ],
     "description_mission": [
-      "Réalisation d'une mission longue professionnalisante de quatre mois (Septembre - Décembre 2024) au sein de l'entreprise GRAPHEAU, bureau d'ingénierié, sous les supervision de M. Théo ROCHAIS (resp. pôle topographique), située à St Pierre de Vassols.",
-      "L'objectif principal de la mission était l'optimisatio des étapes d'acquisition et de traitement des données, en se concentrant sur les réseaux d'eaux pluviales de la ville d'Orange.",
-      "*Mise en place et conduite de campagnes de relevés combinés : GNSS NRTK (Leica GS07, Land2Map, Teria) et photogrammétrique (GoPro Hero 8 sur perche) pour la cartographie des réseaux",
+      "Réalisation d'une mission longue professionnalisante de quatre mois (Septembre - Décembre 2024) au sein de l'entreprise GRAPHEAU, bureau d'ingénierie, sous la supervision de M. Théo ROCHAIS (resp. pôle topographique), située à St Pierre de Vassols.",
+      "L'objectif principal de la mission était l'optimisation des étapes d'acquisition et de traitement des données, en se concentrant sur les réseaux d'eaux pluviales de la ville d'Orange.",
+      "Mise en place et conduite de campagnes de relevés combinés : GNSS NRTK (Leica GS07, Land2Map, Teria) et photogrammétrique (GoPro Hero 8 sur perche) pour la cartographie des réseaux.",
       "Traitement complet des données acquises sur le terrain (Land2Map, service en ligne Geosnap, AutoCAD).",
       "Intégration des données traitées dans un SIG communal en utilisant Qgis."
     ],
@@ -339,7 +334,7 @@
       "Géoradar USRADAR Quantum Imager"
     ],
     "softwares": [
-      "Qgis",
+      "QGIS",
       "AutoCAD",
       "Land2Map",
       "Geosnap"
@@ -365,18 +360,18 @@
       "Gestion de patrimoine"
     ],
     "competences": [
-      "Production de Systèmes d'Information Géographique (SIG)",
+      "Gestion de SIG",
       "Manipulation d'instruments topographiques",
       "Collecte de données pour l'alimentation d'une base de données",
-      "Modélisation et Traitement de données",
+      "Traitement de données",
       "Travail collaboratif",
       "Gestion de projet"
     ],
     "description_mission": [
-      "Participation à deux missions de levés topographiques pour la Junior-Entreprise SR Topo (Janvier et Octobre 2023) à Cesseville et Ecquetot",
-      "Réalisation d'un levé topographique des cimetières dans l'objectif de produire un plan d'état des lieux exhaustif ainsi qu'un plan d'aménagement futur pour les mairies",
-      "Collecte exhaustive des données de recensement (nom, dates de naissance/décès) et photographies de chaque scépulture pour intégration dans la base de données",
-      "Traitement des données, réalisation d'opérations de DAO, et construction du Système d'Information Géographique (SIG) à l'aide du logiciel Qgis",
+      "Participation à deux missions de levés topographiques pour la Junior-Entreprise SR Topo (Janvier et Octobre 2023) à Cesseville et Ecquetot.",
+      "Réalisation d'un levé topographique des cimetières dans l'objectif de produire un plan d'état des lieux exhaustif ainsi qu'un plan d'aménagement futur pour les mairies.",
+      "Collecte exhaustive des données de recensement (nom, dates de naissance/décès) et photographies de chaque sépulture pour intégration dans la base de données.",
+      "Traitement des données, réalisation d'opérations de DAO, et construction du Système d'Information Géographique (SIG) à l'aide du logiciel QGIS.",
       "Travail collaboratif au sein d'une Junior-Entreprise et **montée en compétence** grâce à l'assistance des promotions supérieures."
     ],
     "materiels": [
@@ -384,7 +379,7 @@
       "Récepteur GNSS Trimble R8"
     ],
     "softwares": [
-      "Qgis",
+      "QGIS",
       "AutoCAD",
       "Excel"
     ],
@@ -415,18 +410,18 @@
       "Gestion de patrimoine"
     ],
     "competences": [
-      "Production de Systèmes d'Information Géographique (SIG)",
+      "Gestion de SIG",
       "Manipulation d'instruments topographiques",
       "Collecte de données pour l'alimentation d'une base de données",
-      "Modélisation et Traitement de données",
+      "Traitement de données",
       "Travail collaboratif",
       "Gestion de projet"
     ],
     "description_mission": [
-      "Participation à deux missions de levés topographiques pour la Junior-Entreprise SR Topo (Janvier et Octobre 2023) à Cesseville et Ecquetot",
-      "Réalisation d'un levé topographique des cimetières dans l'objectif de produire un plan d'état des lieux exhaustif ainsi qu'un plan d'aménagement futur pour les mairies",
-      "Collecte exhaustive des données de recensement (nom, dates de naissance/décès) et photographies de chaque scépulture pour intégration dans la base de données",
-      "Traitement des données, réalisation d'opérations de DAO, et construction du Système d'Information Géographique (SIG) à l'aide du logiciel Qgis",
+      "Participation à deux missions de levés topographiques pour la Junior-Entreprise SR Topo (Janvier et Octobre 2023) à Cesseville et Ecquetot.",
+      "Réalisation d'un levé topographique des cimetières dans l'objectif de produire un plan d'état des lieux exhaustif ainsi qu'un plan d'aménagement futur pour les mairies.",
+      "Collecte exhaustive des données de recensement (nom, dates de naissance/décès) et photographies de chaque sépulture pour intégration dans la base de données.",
+      "Traitement des données, réalisation d'opérations de DAO, et construction du Système d'Information Géographique (SIG) à l'aide du logiciel QGIS.",
       "Travail collaboratif au sein d'une Junior-Entreprise et **montée en compétence** grâce à l'assistance des promotions supérieures."
     ],
     "materiels": [
@@ -434,7 +429,7 @@
       "Récepteur GNSS Trimble R8"
     ],
     "softwares": [
-      "Qgis",
+      "QGIS",
       "AutoCAD",
       "Excel"
     ],
@@ -465,15 +460,15 @@
       "Patrimoine"
     ],
     "competences": [
-      "Mise en oeuvre du matériel topographique",
+      "Manipulation d'instruments topographiques",
       "Relevé photogrammétrique",
-      "Collaboration pluridisciplinaire",
+      "Travail collaboratif",
       "Capacité à travailler en sécurité"
     ],
     "description_mission": [
-      "Définition des besoins en accord avec les objectifs d'étude de l'archéologue (M.Laurent CLAEYS)",
-      "Réalisation de levés topographiques du site et des fossés bordant la fortification dans un objectif de mise à jour des plans (station totale Leica TS07)",
-      "Modélisation photogrammétrique (acquisition , rattachement) afin de modéliser les éléments archéologiques (mur en ruine, sondages)",
+      "Définition des besoins en accord avec les objectifs d'étude de l'archéologue (M.Laurent CLAEYS).",
+      "Réalisation de levés topographiques du site et des fossés bordant la fortification dans un objectif de mise à jour des plans (station totale Leica TS07).",
+      "Modélisation photogrammétrique (acquisition, rattachement) afin de modéliser les éléments archéologiques (mur en ruine, sondages).",
       "Collaboration au sein d'une équipe de géomètres (BTS MGTMN et Géomètre Expert)et participation active aux fouilles aux côtés des stagiaires archéologues"
     ],
     "materiels": [
@@ -514,16 +509,16 @@
       "Maîtrise d'œuvre"
     ],
     "competences": [
-      "Participation aux dossiers fonciers de bout en bout.",
-      "Utilisation confirmée du matériel topopgraphique",
+      "Opérations foncières",
+      "Manipulation d'instruments topographiques",
       "Gestion, archivage et référencement des données",
-      "Exposition aux pratiques de Maîtrise d'œuvre appréhension de la diversité des missions du Géomètre-Expert",
+      "Maîtrise d'œuvre",
       "Capacité à s'intégrer rapidement et à bénéficier du retour d'expérience des dirigeants Ingénieurs"
     ],
     "description_mission": [
-      "Acquisition d'une expérience professionnelle en tant qu'assistant géomètre pendant deux mois (Juillet-Août 2021) au Cabinet G.O METRES",
-      "Mise en application et consolidation des savoirs et techniques appris durant la 1ʳᵉ année de BTS MGTMN et en stage",
-      "Réalisation de plusieurs missions à caractère foncier : bornages et divisions parcellaires pour différentes typologies de clients (particuliers, lotisseurs, collectivités)",
+      "Acquisition d'une expérience professionnelle en tant qu'assistant géomètre pendant deux mois (Juillet-Août 2021) au Cabinet G.O METRES.",
+      "Mise en application et consolidation des savoirs et techniques appris durant la 1ère année de BTS MGTMN et en stage.",
+      "Réalisation de plusieurs missions à caractère foncier : bornages et divisions parcellaires pour différentes typologies de clients (particuliers, lotisseurs, collectivités).",
       "Renforcement de l'utilisation des outils d'acquisition de données : stations totales et  récepteurs GNSS",
       "Participation aux affaires de Maîtrise d'œuvre et gestion de l'archivage documentaire et du référencement des dossiers sur Géofoncier"
     ],
@@ -562,7 +557,7 @@
     "statut": "Stagiaire",
     "domaines": [
       "Bathymétrie",
-      "Modélsiation 3D",
+      "Modélisation 3D",
       "Photogrammétrie",
       "Topographie"
     ],
@@ -580,12 +575,12 @@
       "Capacité à travailler en sécurité"
     ],
     "description_mission": [
-      "Réalisation d'un stage de fin de 1ʳᵉ année (Mai-Juin 2021) au Cabinet Acti-Géo, dirigé par M.Laurent TASSEL, axé sur les nouvelles technologies.",
+      "Réalisation d'un stage de fin de 1ère année (Mai-Juin 2021) au Cabinet Acti-Géo, dirigé par M.Laurent TASSEL, axé sur les nouvelles technologies.",
       "Mise en pratique professionnelle des méthodes et outils acquis en formation (BTS MGTMN).",
       "Relevés topographiques à l'aide d'une station totale (Trimble S7) et d'un récepteur GNSS (Trimble R8).",
-      "Traitement des données (Covadis, AutoCad)",
-      "Participation à des missions innovantes impliquant l'utilisation de drones : relevés bathymétriques de lacs de carrières avec l'aqua-drone (WaterRobotics), géoréférencement et suivi de trajectoire en temps réel(RTK, Septentrio NR3, Qinsy), suivi",
-      "Relevé d'intérieur  et de façade avec un scanner 3D (Zoller+Fröhlich 5016) et traitement des données via (Trimble Realworks, Cloud Compare).",
+      "Traitement des données (Covadis, AutoCAD).",
+      "Participation à des missions innovantes impliquant l'utilisation de drones : relevés bathymétriques de lacs de carrières avec l'aqua-drone (WaterRobotics), géoréférencement et suivi de trajectoire en temps réel (RTK, Septentrio NR3, Qinsy).",
+      "Relevé d'intérieur et de façade avec un scanner 3D (Zoller+Fröhlich 5016) et traitement des données (Trimble Realworks, CloudCompare).",
       "Relevé photogrammétrique avec un drone DJI Mavic Pro et traitement des données (Agisoft Metashape) pour la réalisation d'orthoimages.",
       "Acquisition des principes d'organisation d'une mission, de la demande client à la remise des livrables.",
       "Manipulation de données relatives aux opérations foncières et contribution à l'établissement d'actes fonciers (SPF, Géofoncier, Word)"
@@ -637,18 +632,18 @@
       "DAO"
     ],
     "competences": [
-      "Manipulation de matériel topographique",
-      "Traitement des données topographiques",
+      "Manipulation d'instruments topographiques",
+      "Traitement de données topographiques",
       "DAO",
       "Opérations foncières",
       "Capacité d'intégration et de Familiarisation"
     ],
     "description_mission": [
-      "Initiation aux pratiques professionnelles du Géomètre Expert suite à deux journées découverte (mars 2020) au sein du cabinet de M. Franck GILG",
-      "Familiarisation avec l'installation et la manipulation des outils de levé : station totale et récepteur GNSS",
-      "Acquisition des bases du domaine foncier et compréhension du rôle de médiation inhérent à la profession de Géomètre-Expert",
-      "Traitement et exploitation des données de terrain acquises via l'utilisation du logiciel spécialisé Covadis",
-      "Initiation à la rédaction de différents plans dans un environnement de Dessin Assisté par Ordinateur (DAO) sur AutoCAD et au traitement de géobase (Covadis)"
+      "Initiation aux pratiques professionnelles du Géomètre Expert suite à deux journées découverte (mars 2020) au sein du cabinet de M. Franck GILG.",
+      "Familiarisation avec l'installation et la manipulation des outils de levé : station totale et récepteur GNSS.",
+      "Acquisition des bases du domaine foncier et compréhension du rôle de médiation inhérent à la profession de Géomètre-Expert.",
+      "Traitement et exploitation des données de terrain acquises via l'utilisation du logiciel spécialisé Covadis.",
+      "Initiation à la rédaction de différents plans dans un environnement de Dessin Assisté par Ordinateur (DAO) sur AutoCAD et au traitement de géobase (Covadis)."
     ],
     "materiels": [
       "Station totale",
@@ -656,7 +651,7 @@
     ],
     "softwares": [
       "Covadis",
-      "AutoCad",
+      "AutoCAD",
       "Géofoncier"
     ],
     "lien_pdf": null,
@@ -667,7 +662,3 @@
     "images_data": []
   }
 ]
-
-
-
-
