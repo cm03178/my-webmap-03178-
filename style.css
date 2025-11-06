@@ -1,0 +1,776 @@
+/* --- CONFIGURATION GLOBALE --- */
+:root {
+    --font-primary: 'Inter', 'Lato', sans-serif;
+    --color-primary: #007bff;
+    --color-dark: #222;
+    --color-medium: #555;
+    --color-light: #f4f4f4;
+    --color-white: #ffffff;
+    --shadow-light: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-heavy: 0 4px 12px rgba(0,0,0,0.15);
+    --border-radius: 8px;
+
+    /* Couleurs des statuts (professionnel) */
+    --statut-etudiant: #007bff; /* Bleu académique */
+    --statut-benevole: #28a745; /* Vert volontariat */
+    --statut-stagiaire: #fd7e14; /* Orange apprentissage */
+    --statut-prestation: #6f42c1; /* Violet projet/mission */
+    --statut-salarie: #dc3545; /* Rouge professionnel */
+    
+    --panel-width-desktop: 400px;
+    --panel-height-mobile: 45vh;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: var(--font-primary);
+    background-color: var(--color-dark);
+}
+
+/* --- 1. ÉCRAN DE VERROUILLAGE --- */
+#auth-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: opacity 0.5s ease-out;
+}
+
+.auth-box {
+    background: var(--color-white);
+    padding: 2.5rem 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-heavy);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.auth-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--color-light);
+}
+
+.auth-box h2 {
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.auth-box p {
+    color: var(--color-medium);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+#login-form .input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#login-form .input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+#login-form input, #login-form select {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Espace pour l'icône */
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+#login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-button:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    display: none; /* Caché par défaut */
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* --- 2. CONTENEUR DE L'APPLICATION --- */
+#app-container {
+    display: none; /* Caché par défaut */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: #aaa; /* Couleur de fond pendant le chargement */
+    z-index: 1;
+}
+
+/* --- 3. PANNEAUX (MENU & DÉTAILS) --- */
+.map-control-ui {
+    background: var(--color-white);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    z-index: 800;
+    position: absolute;
+    transition: background-color 0.3s ease;
+}
+.map-control-ui:hover {
+    background-color: var(--color-light);
+}
+
+#menu-icon {
+    top: 20px;
+    left: 20px;
+}
+
+/* Styles communs aux panneaux */
+#menu-panel, #details-panel {
+    position: absolute;
+    z-index: 1000;
+    background: var(--color-white);
+    box-shadow: var(--shadow-heavy);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#menu-panel {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: var(--panel-width-desktop);
+    max-width: 90vw;
+    transform: translateX(-100%);
+}
+
+#details-panel {
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: var(--panel-width-desktop);
+    max-width: 100vw;
+    transform: translateX(100%);
+}
+
+/* État actif (panneaux ouverts) */
+#menu-panel.active {
+    transform: translateX(0);
+}
+#details-panel.active {
+    transform: translateX(0);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-light);
+    flex-shrink: 0;
+}
+
+.panel-header h3 {
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--color-medium);
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+.close-btn:hover {
+    color: var(--color-dark);
+}
+
+.panel-content, #details-content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* --- 4. CONTENU DES PANNEAUX --- */
+
+/* Panneau de Menu (Filtres) */
+#filter-section h4, #about-section h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-medium);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#filter-section section {
+    margin-bottom: 1.5rem;
+}
+
+#statut-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.statut-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.statut-filter-label input {
+    display: none; /* Cache la checkbox native */
+}
+
+.statut-filter-label .color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Style quand la checkbox est cochée */
+.statut-filter-label input:checked + .color-dot {
+    outline: 2px solid var(--color-white);
+    outline-offset: -3px;
+}
+.statut-filter-label input:checked {
+    font-weight: 500;
+}
+
+/* Couleurs des filtres (doivent correspondre aux marqueurs) */
+.statut-filter-label[data-statut="etudiant"] { background-color: var(--statut-etudiant); color: white; border-color: var(--statut-etudiant); }
+.statut-filter-label[data-statut="benevole"] { background-color: var(--statut-benevole); color: white; border-color: var(--statut-benevole); }
+.statut-filter-label[data-statut="stagiaire"] { background-color: var(--statut-stagiaire); color: white; border-color: var(--statut-stagiaire); }
+.statut-filter-label[data-statut="prestation"] { background-color: var(--statut-prestation); color: white; border-color: var(--statut-prestation); }
+.statut-filter-label[data-statut="salarie"] { background-color: var(--statut-salarie); color: white; border-color: var(--statut-salarie); }
+
+/* Style quand non coché (léger) */
+.statut-filter-label input:not(:checked) {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+.statut-filter-label[data-statut="etudiant"] input:not(:checked) + .color-dot { background-color: var(--statut-etudiant); }
+.statut-filter-label[data-statut="benevole"] input:not(:checked) + .color-dot { background-color: var(--statut-benevole); }
+.statut-filter-label[data-statut="stagiaire"] input:not(:checked) + .color-dot { background-color: var(--statut-stagiaire); }
+.statut-filter-label[data-statut="prestation"] input:not(:checked) + .color-dot { background-color: var(--statut-prestation); }
+.statut-filter-label[data-statut="salarie"] input:not(:checked) + .color-dot { background-color: var(--statut-salarie); }
+
+
+#competences-filter-container input,
+#tools-filter-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+#competences-list, #tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.filter-badge {
+    background-color: var(--color-light);
+    color: var(--color-medium);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.filter-badge:hover {
+    background-color: #e2e6ea;
+}
+.filter-badge.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+    border-color: var(--color-primary);
+}
+
+#reset-filters-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-medium);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+#reset-filters-btn:hover {
+    background-color: var(--color-dark);
+}
+
+.info-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    background-color: var(--color-light);
+    border: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+.info-btn:hover {
+    background-color: #e2e6ea;
+}
+
+/* Panneau de Détails */
+#details-content .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: var(--color-medium);
+}
+#details-content .placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+#details-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+#details-content .meta {
+    font-size: 1rem;
+    color: var(--color-medium);
+    margin-bottom: 1rem;
+}
+#details-content .meta span {
+    display: block;
+}
+
+.statut-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+/* Couleurs des badges (doivent correspondre aux marqueurs) */
+.statut-etudiant { background-color: var(--statut-etudiant); }
+.statut-benevole { background-color: var(--statut-benevole); }
+.statut-stagiaire { background-color: var(--statut-stagiaire); }
+.statut-prestation { background-color: var(--statut-prestation); }
+.statut-salarie { background-color: var(--statut-salarie); }
+
+#details-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 5px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#details-content .description-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-medium);
+    margin-bottom: 1rem;
+}
+
+.pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
+.pill-list li {
+    background-color: var(--color-light);
+    color: var(--color-medium);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+.members-list {
+    font-size: 0.95rem;
+    color: var(--color-medium);
+    line-height: 1.5;
+}
+
+.details-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+/* Carrousel d'Images */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--color-light);
+}
+
+.carousel-slide {
+    display: none; /* Caché par défaut, géré par JS */
+    width: 100%;
+}
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-caption {
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.03);
+}
+.carousel-caption .caption-text {
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    font-style: italic;
+}
+.carousel-caption .caption-source {
+    font-size: 0.8rem;
+    color: var(--color-medium);
+    margin-top: 5px;
+    display: block;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none; /* Laisse passer les clics sur l'image si besoin */
+}
+
+.carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    cursor: pointer;
+    pointer-events: all; /* Rend les boutons cliquables */
+    transition: background-color 0.3s ease;
+}
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-nav button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* --- 5. MARQUEURS LEAFLET PERSONNALISÉS --- */
+.marker-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 3px solid var(--color-white);
+    box-shadow: var(--shadow-light);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Centre du marqueur (point) */
+.marker-icon::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--color-white);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Couleurs des marqueurs */
+.marker-icon.statut-etudiant { background-color: var(--statut-etudiant); }
+.marker-icon.statut-benevole { background-color: var(--statut-benevole); }
+.marker-icon.statut-stagiaire { background-color: var(--statut-stagiaire); }
+.marker-icon.statut-prestation { background-color: var(--statut-prestation); }
+.marker-icon.statut-salarie { background-color: var(--statut-salarie); }
+
+/* Animation au survol */
+.leaflet-marker-icon:hover .marker-icon {
+    transform: rotate(-45deg) scale(1.2);
+}
+
+/* --- 6. CONTRÔLES LEAFLET PERSONNALISÉS --- */
+
+/* Contrôle de la Légende */
+.leaflet-control-legend {
+    background: var(--color-white);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    line-height: 1.5;
+}
+.leaflet-control-legend h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    color: var(--color-dark);
+}
+.leaflet-control-legend .legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.leaflet-control-legend .legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Contrôle du Logo */
+.leaflet-control-logo {
+    background: var(--color-white);
+    padding: 5px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+.leaflet-control-logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Ajustement de la boussole */
+.leaflet-compass {
+    margin-top: 10px !important;
+}
+
+/* --- 7. MODALE (À PROPOS / LÉGAL) --- */
+#modal-overlay {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10001;
+    justify-content: center;
+    align-items: center;
+}
+#modal-overlay.active {
+    display: flex;
+}
+
+#modal-content {
+    background: var(--color-white);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-heavy);
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-content .close-btn {
+    align-self: flex-end;
+    padding: 1rem;
+}
+
+#modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+#modal-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    overflow-y: auto;
+    line-height: 1.6;
+    color: var(--color-medium);
+}
+#modal-body p {
+    margin-bottom: 1rem;
+}
+.text-link {
+    color: inherit; /* Hérite la couleur du texte parent */
+    text-decoration: underline; /* Souligne pour montrer que c'est cliquable */
+    font-weight: 500; /* Met le lien en semi-gras */
+}
+.text-link:hover {
+    text-decoration: none; /* Enlève le soulignement au survol */
+}
+/* --- 8. RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    /* Ajuste la taille des panneaux */
+    #menu-panel {
+        width: 90vw;
+    }
+    
+    /* Panneau de détails vient du bas */
+    #details-panel {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0; /* Prend toute la largeur */
+        width: 100vw;
+        height: var(--panel-height-mobile);
+        max-height: 80vh; /* Limite */
+        transform: translateY(100%);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+    
+    #details-panel.active {
+        transform: translateY(0);
+    }
+    
+    #details-content {
+        padding: 1rem 1.25rem;
+    }
+    #details-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Bouton de fermeture des détails au centre en haut */
+    #details-close-btn {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--color-white);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: var(--shadow-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        z-index: 10;
+    }
+    
+    /* Ajoute une "poignée" visuelle */
+    #details-close-btn::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        width: 25px;
+        height: 4px;
+        background-color: #ccc;
+        border-radius: 2px;
+    }
+    #details-close-btn i {
+        display: none; /* Cache le 'X' et montre la poignée */
+    }
+
+    /* Cache la légende et le logo sur petit écran pour gain de place */
+    .leaflet-control-legend, .leaflet-control-logo {
+        display: none;
+    }
+
+    /* Ajuste la position de l'icône de menu */
+    #menu-icon {
+        top: 10px;
+        left: 10px;
+    }
+}
