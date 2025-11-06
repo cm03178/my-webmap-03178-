@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let map;
     let dataStore = []; // Pour stocker les données JSON
     let markersLayerGroup; // Pour gérer les marqueurs (ajout/suppression)
-    let allCompetences = new Set();
-    let allTools = new Set();
+    const allCompetences = new Set();
+    const allMateriels = new Set();
+    const allSoftwares = new Set();
     
     const STATUS_MAP = {
         "Etudiant": "etudiant",
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const STATUS_COLORS = {
-        "etudiant": "#007bff",
+        "etudiant": "#0b19ddff",
         "benevole": "#28a745",
         "stagiaire": "#fd7e14",
         "prestation": "#6f42c1",
@@ -100,13 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajout du fond de carte par défaut
         osmStandard.addTo(map);
 
-		// Initialisation du groupe de marqueurs (doit être fait AVANT le contrôle des couches)
+        // Initialisation du groupe de marqueurs (doit être fait AVANT le contrôle des couches)
         markersLayerGroup = L.layerGroup().addTo(map);
 
         const overlays = {
             "Marqueurs": markersLayerGroup
         };
-		
+
         // --- 4. AJOUT DES CONTRÔLES LEAFLET ---
 
         // Sélecteur de couches (Haut-Droite)
@@ -150,9 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return div;
         };
         logo.addTo(map);
-
-        // Initialisation du groupe de marqueurs
-        markersLayerGroup = L.layerGroup().addTo(map);
 
         // Charger les données
         loadData();
@@ -321,22 +319,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // 4. Description (tableau de paragraphes)
-        if (mission.description_mission) {
+        if (mission.description_mission && mission.description_mission.length > 0) {
             html += '<h3>Description</h3>';
             html += '<div class="description-content">';
-
-			 // VÉRIFICATION : Est-ce un tableau ou un simple string ?
-			if (Array.isArray(mission.description_mission)) {
-				// C'est un tableau, on boucle
-				mission.description_mission.forEach(para => {
-					 html += `<p>${linkify(para)}</p>`;
-				 });
-			 } else {
-				// C'est un simple string
-				html += `<p>${linkify(mission.description_mission)}</p>`;
-			}
-
-			html += '</div>';
+            mission.description_mission.forEach(para => {
+                html += `<p>${para}</p>`; // Chaque élément est un paragraphe
+            });
+            html += '</div>';
         }
 
         // 5. Listes (Domaines, Compétences, etc.)
@@ -428,6 +417,38 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel(); // Initialiser l'état des boutons
     }
     
+    /**
+     * Catégorise un outil (matériel ou logiciel) pour simplifier les filtres.
+     * @param {string} toolName - Le nom de l'outil depuis le JSON.
+     * @returns {string} - La catégorie de l'outil.
+     */
+    function getToolCategory(toolName) {
+        const lowerToolName = toolName.toLowerCase();
+
+        // Catégories de matériels
+        if (lowerToolName.includes('station')) return 'Station Totale';
+        if (lowerToolName.includes('scanner')) return 'Scanner 3D';
+        if (lowerToolName.includes('gnss') || lowerToolName.includes('septentrio')) return 'Récepteur GNSS';
+        if (lowerToolName.includes('drone')) return 'Drone';
+        if (lowerToolName.includes('caméra') || lowerToolName.includes('gopro') || lowerToolName.includes('appareil photo')) return 'Appareil photo / Caméra';
+        if (lowerToolName.includes('géoradar')) return 'Géoradar';
+        if (lowerToolName.includes('vivax')) return 'Détecteur de réseaux';
+
+        // Pour les logiciels, on peut aussi standardiser les noms si besoin
+        if (lowerToolName.includes('qgis')) return 'QGIS';
+        if (lowerToolName.includes('autocad')) return 'AutoCAD';
+        if (lowerToolName.includes('covadis')) return 'Covadis';
+        if (lowerToolName.includes('metashape')) return 'Agisoft Metashape';
+        if (lowerToolName.includes('cyclone')) return 'Leica Cyclone';
+        if (lowerToolName.includes('realworks')) return 'Trimble Realworks';
+        if (lowerToolName.includes('cloudcompare')) return 'CloudCompare';
+        if (lowerToolName.includes('géofoncier')) return 'Géofoncier';
+
+        // Si aucune catégorie ne correspond, on retourne le nom original (utile pour les logiciels uniques)
+        return toolName;
+    }
+
+
     // --- 9. GESTION DES FILTRES ---
 
     /**
@@ -436,8 +457,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateFilters(data) {
         const statutContainer = document.getElementById('statut-filter-container');
         const competencesList = document.getElementById('competences-list');
-        const toolsList = document.getElementById('tools-list');
-
+        const materielsList = document.getElementById('materiels-list');
+        const logicielsList = document.getElementById('logiciels-list');
+        
         // 1. Filtres de Statut (basés sur la map statique)
         statutContainer.innerHTML = '';
         for (const [key, value] of Object.entries(STATUS_MAP)) {
@@ -453,8 +475,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Collecter Compétences et Outils/Logiciels
         data.forEach(mission => {
             mission.competences?.forEach(c => allCompetences.add(c));
-            mission.softwares?.forEach(s => allTools.add(s));
-            mission.materiels?.forEach(m => allTools.add(m)); // On combine matériels et logiciels
+            // Catégoriser et ajouter les matériels
+            mission.materiels?.forEach(materiel => {
+                const category = getToolCategory(materiel);
+                allMateriels.add(category);
+            });
+            // Catégoriser et ajouter les logiciels
+            mission.softwares?.forEach(software => {
+                allSoftwares.add(software); // Les logiciels ne sont pas catégorisés pour le moment
+            });
         });
 
         // 3. Afficher Compétences
@@ -463,10 +492,16 @@ document.addEventListener('DOMContentLoaded', () => {
             competencesList.innerHTML += `<span class="filter-badge" data-filter-type="competence" data-value="${c}">${c}</span>`;
         });
         
-        // 4. Afficher Outils/Logiciels
-        toolsList.innerHTML = '';
-        [...allTools].sort().forEach(t => {
-            toolsList.innerHTML += `<span class="filter-badge" data-filter-type="tool" data-value="${t}">${t}</span>`;
+        // 4. Afficher Matériels
+        materielsList.innerHTML = '';
+        [...allMateriels].sort().forEach(m => {
+            materielsList.innerHTML += `<span class="filter-badge" data-filter-type="materiel" data-value="${m}">${m}</span>`;
+        });
+
+        // 5. Afficher Logiciels
+        logicielsList.innerHTML = '';
+        [...allSoftwares].sort().forEach(s => {
+            logicielsList.innerHTML += `<span class="filter-badge" data-filter-type="logiciel" data-value="${s}">${s}</span>`;
         });
     }
     
@@ -480,8 +515,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Obtenir les compétences sélectionnées
         const selectedCompetences = [...document.querySelectorAll('.filter-badge[data-filter-type="competence"].active')].map(badge => badge.dataset.value);
 
-        // 3. Obtenir les outils sélectionnés
-        const selectedTools = [...document.querySelectorAll('.filter-badge[data-filter-type="tool"].active')].map(badge => badge.dataset.value);
+        // 3. Obtenir les matériels sélectionnés
+        const selectedMateriels = [...document.querySelectorAll('.filter-badge[data-filter-type="materiel"].active')].map(badge => badge.dataset.value);
+
+        // 4. Obtenir les logiciels sélectionnés
+        const selectedLogiciels = [...document.querySelectorAll('.filter-badge[data-filter-type="logiciel"].active')].map(badge => badge.dataset.value);
 
         // 4. Filtrer dataStore
         const filteredMissions = dataStore.filter(mission => {
@@ -492,11 +530,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 mission.competences?.includes(selComp)
             );
             
-            const toolsMatch = selectedTools.length === 0 || selectedTools.every(selTool => 
-                mission.softwares?.includes(selTool) || mission.materiels?.includes(selTool)
+            // Correspondance des matériels (avec catégorisation)
+            const missionMaterielCategories = new Set((mission.materiels || []).map(getToolCategory));
+            const materielMatch = selectedMateriels.length === 0 || selectedMateriels.every(selMat =>
+                missionMaterielCategories.has(selMat)
             );
 
-            return statutMatch && competenceMatch && toolsMatch;
+            // Correspondance des logiciels (directe)
+            const logicielMatch = selectedLogiciels.length === 0 || selectedLogiciels.every(selLog =>
+                mission.softwares?.includes(selLog)
+            );
+
+            return statutMatch && competenceMatch && materielMatch && logicielMatch;
         });
 
         // 5. Rendre à nouveau les marqueurs
@@ -518,6 +563,49 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fermer Panneau de détails
         detailsCloseBtn.addEventListener('click', () => detailsPanel.classList.remove('active'));
 
+        // --- Ajout de la gestion du swipe pour fermer le panneau de détails sur mobile ---
+        let touchStartY = 0;
+        let touchMoveY = 0;
+
+        detailsPanel.addEventListener('touchstart', (e) => {
+            // On ne commence le suivi que si le doigt est sur l'en-tête ou la poignée pour ne pas bloquer le scroll du contenu
+            if (e.target.closest('#details-close-btn') || e.target.closest('.panel-header')) {
+                 touchStartY = e.touches[0].clientY;
+            } else {
+                touchStartY = 0; // Reset si on touche le contenu scrollable
+            }
+        }, { passive: true });
+
+        detailsPanel.addEventListener('touchmove', (e) => {
+            if (touchStartY === 0) return;
+            touchMoveY = e.touches[0].clientY;
+        }, { passive: true });
+
+        detailsPanel.addEventListener('touchend', (e) => {
+            if (touchStartY === 0) return;
+            const swipeDistance = touchMoveY - touchStartY;
+            // Si on a glissé vers le bas de plus de 50px
+            if (swipeDistance > 50) {
+                detailsPanel.classList.remove('active');
+            }
+            // Reset des positions
+            touchStartY = 0;
+            touchMoveY = 0;
+        });
+
+        // --- Gestion des accordéons dans les filtres ---
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                // Ferme les autres accordéons
+                document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                    if (openContent !== content) openContent.classList.remove('open');
+                });
+                // Ouvre ou ferme l'accordéon cliqué
+                content.classList.toggle('open');
+            });
+        });
+
         // Clic en dehors des panneaux pour les fermer
         map.on('click', () => {
             menuPanel.classList.remove('active');
@@ -531,8 +619,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Filtres Badges (Compétences & Outils)
         document.getElementById('competences-list').addEventListener('click', toggleBadgeFilter);
-        document.getElementById('tools-list').addEventListener('click', toggleBadgeFilter);
-
+        document.getElementById('materiels-list').addEventListener('click', toggleBadgeFilter);
+        document.getElementById('logiciels-list').addEventListener('click', toggleBadgeFilter);
+        
         function toggleBadgeFilter(e) {
             if (e.target.classList.contains('filter-badge')) {
                 e.target.classList.toggle('active');
@@ -542,8 +631,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Recherche dans les filtres
         document.getElementById('competence-search').addEventListener('input', (e) => filterBadgeList(e.target.value, 'competences-list'));
-        document.getElementById('tool-search').addEventListener('input', (e) => filterBadgeList(e.target.value, 'tools-list'));
-
+        document.getElementById('materiel-search').addEventListener('input', (e) => filterBadgeList(e.target.value, 'materiels-list'));
+        document.getElementById('logiciel-search').addEventListener('input', (e) => filterBadgeList(e.target.value, 'logiciels-list'));
+        
         function filterBadgeList(term, listId) {
             const listContainer = document.getElementById(listId);
             const badges = listContainer.querySelectorAll('.filter-badge');
@@ -563,9 +653,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.filter-badge.active').forEach(badge => badge.classList.remove('active'));
             // Vider recherche
             document.getElementById('competence-search').value = '';
-            document.getElementById('tool-search').value = '';
+            document.getElementById('materiel-search').value = '';
+            document.getElementById('logiciel-search').value = '';
+            // Afficher tous les badges
             filterBadgeList('', 'competences-list');
-            filterBadgeList('', 'tools-list');
+            filterBadgeList('', 'materiels-list');
+            filterBadgeList('', 'logiciels-list');
             
             // Appliquer (ce qui va tout réafficher)
             applyFilters();
@@ -581,7 +674,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTitle.textContent = "À propos de ce portfolio";
             modalBody.innerHTML = `
                 <p>Cette carte interactive présente mon parcours académique et professionnel dans les domaines de la géomatique, de la topographie et de l'ingénierie.</p>
-                <p>Elle a été développée en utilisant <strong>Leaflet.js</strong> pour la cartographie, et est alimentée dynamiquement par un fichier <strong>JSON</strong> contenant toutes les données des missions, formations et projets.</p>
+                <p>Elle a été développée en utilisant <strong>Leaflet.js</strong> pour la cartographie, et est alimentée par un fichier <strong>JSON</strong> contenant toutes les données des missions, formations et projets.</p>
                 <p>Naviguez en cliquant sur les marqueurs pour découvrir les détails de chaque expérience.</p>
                 <p>Développé par Manuel Castet.</p>
             `;
@@ -608,11 +701,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
-
-
-
-
-
-
