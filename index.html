@@ -66,22 +66,32 @@
             <div class="panel-content">
                 
                 <section id="filter-section">
-                    <h4><i class="fa-solid fa-filter"></i> Filtrer par Statut</h4>
-                    <div id="statut-filter-container">
+                    <div class="filter-accordion">
+                        <button class="accordion-header"><h4><i class="fa-solid fa-filter"></i> Filtrer par Statut</h4></button>
+                        <div class="accordion-content">
+                            <div id="statut-filter-container"></div>
                         </div>
-
-                    <h4><i class="fa-solid fa-star"></i> Filtrer par Compétences</h4>
-                    <div id="competences-filter-container">
-                        <input type="text" id="competence-search" placeholder="Rechercher une compétence...">
-                        <div id="competences-list">
-                           </div>
                     </div>
-                    
-                    <h4><i class="fa-solid fa-tools"></i> Filtrer par Outils/Logiciels</h4>
-                    <div id="tools-filter-container">
-                         <input type="text" id="tool-search" placeholder="Rechercher un outil...">
-                         <div id="tools-list">
-                            </div>
+                    <div class="filter-accordion">
+                        <button class="accordion-header"><h4><i class="fa-solid fa-star"></i> Filtrer par Compétences</h4></button>
+                        <div class="accordion-content">
+                            <input type="text" id="competence-search" placeholder="Rechercher une compétence...">
+                            <div id="competences-list"></div>
+                        </div>
+                    </div>
+                    <div class="filter-accordion">
+                        <button class="accordion-header"><h4><i class="fa-solid fa-cogs"></i> Filtrer par Matériels</h4></button>
+                        <div class="accordion-content">
+                            <input type="text" id="materiel-search" placeholder="Rechercher un matériel...">
+                            <div id="materiels-list"></div>
+                        </div>
+                    </div>
+                    <div class="filter-accordion">
+                        <button class="accordion-header"><h4><i class="fa-solid fa-code"></i> Filtrer par Logiciels</h4></button>
+                        <div class="accordion-content">
+                            <input type="text" id="logiciel-search" placeholder="Rechercher un logiciel...">
+                            <div id="logiciels-list"></div>
+                        </div>
                     </div>
 
                     <button id="reset-filters-btn"><i class="fa-solid fa-rotate-left"></i> Réinitialiser les filtres</button>
@@ -119,4 +129,3 @@
 
 </body>
 </html>
-
