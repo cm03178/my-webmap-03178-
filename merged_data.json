@@ -98,7 +98,7 @@
       "Travail collaboratif",
       "Capacité à travailler en sécurité"
     ],
-    "description_mission": "BTS Métier du Géomètre Topographe et Modélisation Numérique (MGTMN).",
+    "description_mission": null,
     "materiels": [
       "Stations totales Leica",
       "Scanners 3D Leica",
@@ -667,6 +667,7 @@
     "images_data": []
   }
 ]
+
 
 
 
