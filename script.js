@@ -100,6 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajout du fond de carte par défaut
         osmStandard.addTo(map);
 
+		// Initialisation du groupe de marqueurs (doit être fait AVANT le contrôle des couches)
+        markersLayerGroup = L.layerGroup().addTo(map);
+
+        const overlays = {
+            "Marqueurs": markersLayerGroup
+        };
+		
         // --- 4. AJOUT DES CONTRÔLES LEAFLET ---
 
         // Sélecteur de couches (Haut-Droite)
@@ -146,10 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initialisation du groupe de marqueurs
         markersLayerGroup = L.layerGroup().addTo(map);
-
-		const overlays = {
-            "Marqueurs": markersLayerGroup
-        };
 
         // Charger les données
         loadData();
@@ -605,6 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
 
