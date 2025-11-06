@@ -314,13 +314,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // 4. Description (tableau de paragraphes)
-        if (mission.description_mission && mission.description_mission.length > 0) {
+        if (mission.description_mission) {
             html += '<h3>Description</h3>';
             html += '<div class="description-content">';
-            mission.description_mission.forEach(para => {
-                html += `<p>${para}</p>`; // Chaque élément est un paragraphe
-            });
-            html += '</div>';
+
+			 // VÉRIFICATION : Est-ce un tableau ou un simple string ?
+			if (Array.isArray(mission.description_mission)) {
+				// C'est un tableau, on boucle
+				mission.description_mission.forEach(para => {
+					 html += `<p>${linkify(para)}</p>`;
+				 });
+			 } else {
+				// C'est un simple string
+				html += `<p>${linkify(mission.description_mission)}</p>`;
+			}
+
+			html += '</div>';
         }
 
         // 5. Listes (Domaines, Compétences, etc.)
@@ -592,6 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
 
