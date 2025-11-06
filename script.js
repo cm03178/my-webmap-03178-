@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- 4. AJOUT DES CONTRÔLES LEAFLET ---
 
         // Sélecteur de couches (Haut-Droite)
-        L.control.layers(basemaps).addTo(map);
+        L.control.layers(basemaps, overlays).addTo(map);
 
         // Échelle (Bas-Gauche)
         L.control.scale({ imperial: false }).addTo(map);
@@ -146,6 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initialisation du groupe de marqueurs
         markersLayerGroup = L.layerGroup().addTo(map);
+
+		const overlays = {
+            "Marqueurs": markersLayerGroup
+        };
 
         // Charger les données
         loadData();
@@ -601,6 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
 
