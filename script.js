@@ -1,6 +1,170 @@
 // Attendre que le DOM soit entièrement chargé
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- 0. TRADUCTIONS ET GESTION DE LA LANGUE ---
+    const translations = {
+        fr: {
+            // Auth
+            portfolioTitle: "Portfolio Géomatique",
+            passwordPrompt: "Veuillez entrer le mot de passe pour continuer.",
+            passwordPlaceholder: "Mot de passe",
+            loginButton: "Entrer",
+            incorrectPassword: "Mot de passe incorrect. Veuillez réessayer.",
+            // UI
+            menuTitle: "Ouvrir le menu et les filtres",
+            menuHeader: "Menu & Filtres",
+            closeMenuTitle: "Fermer le menu",
+            filterStatus: "Filtrer par Statut",
+            filterSkills: "Filtrer par Compétences",
+            searchSkillPlaceholder: "Rechercher une compétence...",
+            filterHardware: "Filtrer par Matériels",
+            searchHardwarePlaceholder: "Rechercher un matériel...",
+            filterSoftware: "Filtrer par Logiciels",
+            searchSoftwarePlaceholder: "Rechercher un logiciel...",
+            resetFilters: "Réinitialiser les filtres",
+            information: "Informations",
+            about: "À propos",
+            legal: "Mentions Légales",
+            closeDetailsTitle: "Fermer les détails",
+            detailsPlaceholder: "Cliquez sur un marqueur sur la carte pour afficher les détails d'une mission ou d'une formation.",
+            // Map
+            basemapStandard: "Standard",
+            basemapTopo: "Topographique",
+            basemapSatellite: "Satellite",
+            basemapNight: "Mode Nuit",
+            markersOverlay: "Marqueurs",
+            compassError: "Boussole non disponible",
+            legendTitle: "Légende",
+            // Details Panel
+            noTitle: "Titre non disponible",
+            description: "Description",
+            domains: "Domaines",
+            skills: "Compétences",
+            hardware: "Matériels",
+            software: "Logiciels",
+            members: "Membres & Collaborateurs",
+            viewMorePDF: "Voir plus (PDF)",
+            // Modals
+            aboutTitle: "À propos de ce portfolio",
+            aboutBody: `<p>Cette carte interactive présente mon parcours académique et professionnel dans les domaines de la géomatique, de la topographie et de l'ingénierie.</p><p>Elle a été développée en utilisant <strong>Leaflet.js</strong> pour la cartographie, et est alimentée par un fichier <strong>JSON</strong> contenant toutes les données des missions, formations et projets.</p><p>Naviguez en cliquant sur les marqueurs pour découvrir les détails de chaque expérience.</p><p>Développé par Manuel Castet.</p>`,
+            legalTitle: "Mentions Légales & Propriété",
+            legalBody: `<p>Ce site est un portfolio personnel à but non-commercial.</p><p>L'accès à ce contenu est restreint. Les informations, données et documents présentés sur ce site sont la propriété intellectuelle de Manuel Castet et/ou des entités respectives mentionnées (écoles, entreprises, missions).</p><p>Toute reproduction, diffusion ou utilisation des contenus de ce site (données, images, code) sans autorisation préalable explicite est strictement interdite.</p><p>Les fonds de carte sont la propriété de leurs fournisseurs respectifs (OpenStreetMap, Esri, CartoDB, OpenTopoMap) et sont utilisés conformément à leurs licences.</p>`,
+        },
+        en: {
+            portfolioTitle: "Geomatics Portfolio",
+            passwordPrompt: "Please enter the password to continue.",
+            passwordPlaceholder: "Password",
+            loginButton: "Enter",
+            incorrectPassword: "Incorrect password. Please try again.",
+            menuTitle: "Open menu and filters",
+            menuHeader: "Menu & Filters",
+            closeMenuTitle: "Close menu",
+            filterStatus: "Filter by Status",
+            filterSkills: "Filter by Skills",
+            searchSkillPlaceholder: "Search for a skill...",
+            filterHardware: "Filter by Hardware",
+            searchHardwarePlaceholder: "Search for hardware...",
+            filterSoftware: "Filter by Software",
+            searchSoftwarePlaceholder: "Search for software...",
+            resetFilters: "Reset Filters",
+            information: "Information",
+            about: "About",
+            legal: "Legal Notice",
+            closeDetailsTitle: "Close details",
+            detailsPlaceholder: "Click on a marker on the map to display the details of a mission or training.",
+            basemapStandard: "Standard",
+            basemapTopo: "Topographic",
+            basemapSatellite: "Satellite",
+            basemapNight: "Night Mode",
+            markersOverlay: "Markers",
+            compassError: "Compass not available",
+            legendTitle: "Legend",
+            noTitle: "Title not available",
+            description: "Description",
+            domains: "Domains",
+            skills: "Skills",
+            hardware: "Hardware",
+            software: "Software",
+            members: "Members & Collaborators",
+            viewMorePDF: "View more (PDF)",
+            aboutTitle: "About this portfolio",
+            aboutBody: `<p>This interactive map presents my academic and professional background in the fields of geomatics, surveying, and engineering.</p><p>It was developed using <strong>Leaflet.js</strong> for mapping, and is powered by a <strong>JSON</strong> file containing all the data for missions, training, and projects.</p><p>Navigate by clicking on the markers to discover the details of each experience.</p><p>Developed by Manuel Castet.</p>`,
+            legalTitle: "Legal Notice & Ownership",
+            legalBody: `<p>This site is a personal, non-commercial portfolio.</p><p>Access to this content is restricted. The information, data, and documents presented on this site are the intellectual property of Manuel Castet and/or the respective entities mentioned (schools, companies, missions).</p><p>Any reproduction, distribution, or use of the contents of this site (data, images, code) without explicit prior authorization is strictly prohibited.</p><p>The basemaps are the property of their respective providers (OpenStreetMap, Esri, CartoDB, OpenTopoMap) and are used in accordance with their licenses.</p>`,
+        },
+        es: {
+            portfolioTitle: "Portfolio de Geomática",
+            passwordPrompt: "Por favor, introduzca la contraseña para continuar.",
+            passwordPlaceholder: "Contraseña",
+            loginButton: "Entrar",
+            incorrectPassword: "Contraseña incorrecta. Por favor, inténtelo de nuevo.",
+            menuTitle: "Abrir menú y filtros",
+            menuHeader: "Menú y Filtros",
+            closeMenuTitle: "Cerrar menú",
+            filterStatus: "Filtrar por Estado",
+            filterSkills: "Filtrar por Competencias",
+            searchSkillPlaceholder: "Buscar una competencia...",
+            filterHardware: "Filtrar por Materiales",
+            searchHardwarePlaceholder: "Buscar un material...",
+            filterSoftware: "Filtrar por Software",
+            searchSoftwarePlaceholder: "Buscar un software...",
+            resetFilters: "Restablecer filtros",
+            information: "Información",
+            about: "Acerca de",
+            legal: "Aviso Legal",
+            closeDetailsTitle: "Cerrar detalles",
+            detailsPlaceholder: "Haga clic en un marcador en el mapa para ver los detalles de una misión o formación.",
+            basemapStandard: "Estándar",
+            basemapTopo: "Topográfico",
+            basemapSatellite: "Satélite",
+            basemapNight: "Modo Noche",
+            markersOverlay: "Marcadores",
+            compassError: "Brújula no disponible",
+            legendTitle: "Leyenda",
+            noTitle: "Título no disponible",
+            description: "Descripción",
+            domains: "Dominios",
+            skills: "Competencias",
+            hardware: "Materiales",
+            software: "Software",
+            members: "Miembros y Colaboradores",
+            viewMorePDF: "Ver más (PDF)",
+            aboutTitle: "Acerca de este portfolio",
+            aboutBody: `<p>Este mapa interactivo presenta mi trayectoria académica y profesional en los campos de la geomática, la topografía y la ingeniería.</p><p>Ha sido desarrollado utilizando <strong>Leaflet.js</strong> para la cartografía, y se alimenta de un archivo <strong>JSON</strong> que contiene todos los datos de las misiones, formaciones y proyectos.</p><p>Navegue haciendo clic en los marcadores para descubrir los detalles de cada experiencia.</p><p>Desarrollado por Manuel Castet.</p>`,
+            legalTitle: "Aviso Legal y Propiedad",
+            legalBody: `<p>Este sitio es un portfolio personal sin fines comerciales.</p><p>El acceso a este contenido está restringido. La información, los datos y los documentos presentados en este sitio son propiedad intelectual de Manuel Castet y/o de las respectivas entidades mencionadas (escuelas, empresas, misiones).</p><p>Cualquier reproducción, difusión o uso de los contenidos de este sitio (datos, imágenes, código) sin autorización previa explícita está estrictamente prohibida.</p><p>Los mapas base son propiedad de sus respectivos proveedores (OpenStreetMap, Esri, CartoDB, OpenTopoMap) y se utilizan de acuerdo con sus licencias.</p>`,
+        }
+    };
+
+    let currentLang = 'fr';
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        const langTranslations = translations[lang];
+        document.querySelectorAll('[data-lang-key]').forEach(elem => {
+            const key = elem.dataset.langKey;
+            if (langTranslations[key]) {
+                if (elem.placeholder !== undefined) {
+                    elem.placeholder = langTranslations[key];
+                } else if (elem.title !== undefined && (elem.id === 'menu-icon' || elem.id === 'details-close-btn' || elem.id === 'menu-close-btn')) {
+                    elem.title = langTranslations[key];
+                } else if (elem.tagName === 'BUTTON' && elem.id === 'reset-filters-btn') {
+                    // Keep icon, replace text
+                    const icon = elem.querySelector('i');
+                    elem.innerHTML = '';
+                    if (icon) elem.appendChild(icon);
+                    elem.innerHTML += ` ${langTranslations[key]}`;
+                } else {
+                    elem.textContent = langTranslations[key];
+                }
+            }
+        });
+        // Special cases
+        document.getElementById('login-button').textContent = langTranslations.loginButton;
+        document.getElementById('error-message').textContent = langTranslations.incorrectPassword;
+    }
+
+
     // --- 1. VARIABLES GLOBALES ---
     let map;
     let dataStore = []; // Pour stocker les données JSON
@@ -9,12 +173,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const allMateriels = new Set();
     const allSoftwares = new Set();
     
+    const DATA_FILES = {
+        fr: './merged_data.json',
+        en: './merged_data_eng.json',
+        es: './merged_data_esp.json'
+    };
+
     const STATUS_MAP = {
         "Etudiant": "etudiant",
         "Bénévole": "benevole",
         "Stagiaire": "stagiaire",
         "Prestation ponctuelle": "prestation",
         "Technicien salarié": "salarie"
+    };
+    // English statuses
+    const STATUS_MAP_EN = {
+        "Student": "etudiant",
+        "Volunteer": "benevole",
+        "Intern": "stagiaire",
+        "Short-term contract": "prestation",
+        "Salaried technician": "salarie"
+    };
+    // Spanish statuses
+    const STATUS_MAP_ES = {
+        "Estudiante": "etudiant",
+        "Voluntario": "benevole",
+        "Becario": "stagiaire",
+        "Servicio puntual": "prestation",
+        "Técnico asalariado": "salarie"
     };
 
     const STATUS_COLORS = {
@@ -30,10 +216,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app-container');
     const loginForm = document.getElementById('login-form');
     const passwordInput = document.getElementById('password-input');
+    const languageSelect = document.getElementById('language-select');
     const errorMessage = document.getElementById('error-message');
+
+    languageSelect.addEventListener('change', (e) => {
+        setLanguage(e.target.value);
+    });
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
+        currentLang = languageSelect.value;
         
         // Mot de passe codé en dur (comme demandé)
         if (passwordInput.value === "ESGTCM25") {
@@ -75,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         map = L.map('map').setView([46.603354, 1.888334], 6); // Centre sur la France
 
         // Définition des fonds de carte (Basemaps)
+        const langTrans = translations[currentLang];
         const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
@@ -92,10 +285,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const basemaps = {
-            "Standard": osmStandard,
-            "Topographique": osmTopo,
-            "Satellite": satellite,
-            "Mode Nuit": osmDark
+            [langTrans.basemapStandard]: osmStandard,
+            [langTrans.basemapTopo]: osmTopo,
+            [langTrans.basemapSatellite]: satellite,
+            [langTrans.basemapNight]: osmDark
         };
 
         // Ajout du fond de carte par défaut
@@ -105,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         markersLayerGroup = L.layerGroup().addTo(map);
 
         const overlays = {
-            "Marqueurs": markersLayerGroup
+            [langTrans.markersOverlay]: markersLayerGroup
         };
 
         // --- 4. AJOUT DES CONTRÔLES LEAFLET ---
@@ -121,18 +314,29 @@ document.addEventListener('DOMContentLoaded', () => {
             position: 'topright',
             autoActive: true,
             showDigit: false,
-            textErr: 'Boussole non disponible'
+            textErr: langTrans.compassError
         }).addTo(map);
 
         // Contrôle personnalisé : Légende (Bas-Gauche)
         const legend = L.control({ position: 'bottomleft' });
         legend.onAdd = function (map) {
             const div = L.DomUtil.create('div', 'leaflet-control-legend');
-            div.innerHTML = '<h4>Légende</h4>';
-            for (const [key, value] of Object.entries(STATUS_MAP)) {
+            div.innerHTML = `<h4>${langTrans.legendTitle}</h4>`;
+            
+            let currentStatusMap;
+            if (currentLang === 'en') {
+                currentStatusMap = STATUS_MAP_EN;
+            } else if (currentLang === 'es') {
+                currentStatusMap = STATUS_MAP_ES;
+            } else {
+                currentStatusMap = STATUS_MAP;
+            }
+
+            for (const [key, value] of Object.entries(currentStatusMap)) {
+                const statusClass = value;
                 div.innerHTML += `
-                    <div class="legend-item">
-                        <span class="legend-color" style="background-color: ${STATUS_COLORS[value]}"></span>
+                    <div class="legend-item" data-status-key="${key}">
+                        <span class="legend-color" style="background-color: ${STATUS_COLORS[statusClass]}"></span>
                         ${key}
                     </div>
                 `;
@@ -153,13 +357,14 @@ document.addEventListener('DOMContentLoaded', () => {
         logo.addTo(map);
 
         // Charger les données
-        loadData();
+        loadData(currentLang);
     }
 
     // --- 5. CHARGEMENT ET TRAITEMENT DES DONNÉES ---
-    async function loadData() {
+    async function loadData(lang) {
+        const dataPath = DATA_FILES[lang] || DATA_FILES['fr'];
         try {
-            const response = await fetch('./merged_data.json');
+            const response = await fetch(dataPath);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -184,7 +389,18 @@ document.addEventListener('DOMContentLoaded', () => {
      * @returns {string} - Le nom de la classe (ex: "statut-prestation")
      */
     function cleanStatutName(statut) {
-        return 'statut-' + (STATUS_MAP[statut] || 'default');
+        let currentStatusMap;
+        if (currentLang === 'en') {
+            currentStatusMap = STATUS_MAP_EN;
+        } else if (currentLang === 'es') {
+            currentStatusMap = STATUS_MAP_ES;
+        } else {
+            currentStatusMap = STATUS_MAP;
+        }
+        // Find the class name from the translated status
+        const statusClass = currentStatusMap[statut];
+
+        return 'statut-' + (statusClass || 'default');
     }
 
     /**
@@ -278,6 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function showDetails(mission) {
         const detailsContent = document.getElementById('details-content');
+        const langTrans = translations[currentLang];
         const statutClass = cleanStatutName(mission.statut);
         
         // 1. Vider le contenu précédent
@@ -286,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Construire le nouveau HTML
         let html = `
             <span class="statut-badge ${statutClass}">${mission.statut || 'N/A'}</span>
-            <h2>${mission.nom || mission.titre || 'Titre non disponible'}</h2>
+            <h2>${mission.nom || mission.titre || langTrans.noTitle}</h2>
             <p class="meta">
                 <span><i class="fa-solid fa-calendar-days"></i> ${mission.dates}</span>
                 <span><i class="fa-solid fa-location-dot"></i> ${mission.lieu}</span>
@@ -320,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 4. Description (tableau de paragraphes)
         if (mission.description_mission && mission.description_mission.length > 0) {
-            html += '<h3>Description</h3>';
+            html += `<h3>${langTrans.description}</h3>`;
             html += '<div class="description-content">';
             mission.description_mission.forEach(para => {
                 html += `<p>${para}</p>`; // Chaque élément est un paragraphe
@@ -329,15 +546,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 5. Listes (Domaines, Compétences, etc.)
-        html += createPillListHTML('Domaines', mission.domaines);
-        html += createPillListHTML('Compétences', mission.competences);
-        html += createPillListHTML('Matériels', mission.materiels); // 'matériels' dans le JSON
-        html += createPillListHTML('Logiciels', mission.softwares); // 'softwares' dans le JSON
+        html += createPillListHTML(langTrans.domains, mission.domaines);
+        html += createPillListHTML(langTrans.skills, mission.competences);
+        html += createPillListHTML(langTrans.hardware, mission.materiels); // 'matériels' dans le JSON
+        html += createPillListHTML(langTrans.software, mission.softwares); // 'softwares' dans le JSON
 
         // 6. Membres
         if (mission.membres) { // 'membres' dans le JSON
             html += `
-                <h3>Membres & Collaborateurs</h3>
+                <h3>${langTrans.members}</h3>
                 <p class="members-list">${mission.membres}</p>
             `;
         }
@@ -346,7 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mission.lien_pdf) {
             html += `
                 <a href="${mission.lien_pdf}" target="_blank" class="details-button">
-                    <i class="fa-solid fa-file-pdf"></i> Voir plus (PDF)
+                    <i class="fa-solid fa-file-pdf"></i> ${langTrans.viewMorePDF}
                 </a>
             `;
         }
@@ -460,13 +677,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const materielsList = document.getElementById('materiels-list');
         const logicielsList = document.getElementById('logiciels-list');
         
+        let currentStatusMap;
+        if (currentLang === 'en') {
+            currentStatusMap = STATUS_MAP_EN;
+        } else if (currentLang === 'es') {
+            currentStatusMap = STATUS_MAP_ES;
+        } else {
+            currentStatusMap = STATUS_MAP;
+        }
+
         // 1. Filtres de Statut (basés sur la map statique)
         statutContainer.innerHTML = '';
-        for (const [key, value] of Object.entries(STATUS_MAP)) {
+        for (const [key, value] of Object.entries(currentStatusMap)) {
+            const statusClass = value;
             statutContainer.innerHTML += `
-                <label class="statut-filter-label" data-statut="${value}">
+                <label class="statut-filter-label" data-statut="${statusClass}">
                     <input type="checkbox" class="statut-filter" value="${key}">
-                    <span class="color-dot" style="background-color: ${STATUS_COLORS[value]}"></span>
+                    <span class="color-dot" style="background-color: ${STATUS_COLORS[statusClass]}"></span>
                     ${key}
                 </label>
             `;
@@ -546,6 +773,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 5. Rendre à nouveau les marqueurs
         renderMarkers(filteredMissions);
+
     }
     
     // --- 10. GESTION DES ÉVÉNEMENTS (MENU, MODALES, FILTRES) ---
@@ -671,24 +899,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalCloseBtn = document.getElementById('modal-close-btn');
 
         document.getElementById('about-btn').addEventListener('click', () => {
-            modalTitle.textContent = "À propos de ce portfolio";
-            modalBody.innerHTML = `
-                <p>Cette carte interactive présente mon parcours académique et professionnel dans les domaines de la géomatique, de la topographie et de l'ingénierie.</p>
-                <p>Elle a été développée en utilisant <strong>Leaflet.js</strong> pour la cartographie, et est alimentée par un fichier <strong>JSON</strong> contenant toutes les données des missions, formations et projets.</p>
-                <p>Naviguez en cliquant sur les marqueurs pour découvrir les détails de chaque expérience.</p>
-                <p>Développé par Manuel Castet.</p>
-            `;
+            const langTrans = translations[currentLang];
+            modalTitle.textContent = langTrans.aboutTitle;
+            modalBody.innerHTML = langTrans.aboutBody;
             modalOverlay.classList.add('active');
         });
 
         document.getElementById('legal-btn').addEventListener('click', () => {
-            modalTitle.textContent = "Mentions Légales & Propriété";
-            modalBody.innerHTML = `
-                <p>Ce site est un portfolio personnel à but non-commercial.</p>
-                <p>L'accès à ce contenu est restreint. Les informations, données et documents présentés sur ce site sont la propriété intellectuelle de Manuel Castet et/ou des entités respectives mentionnées (écoles, entreprises, missions).</p>
-                <p>Toute reproduction, diffusion ou utilisation des contenus de ce site (données, images, code) sans autorisation préalable explicite est strictement interdite.</p>
-                <p>Les fonds de carte sont la propriété de leurs fournisseurs respectifs (OpenStreetMap, Esri, CartoDB, OpenTopoMap) et sont utilisés conformément à leurs licences.</p>
-            `;
+            const langTrans = translations[currentLang];
+            modalTitle.textContent = langTrans.legalTitle;
+            modalBody.innerHTML = langTrans.legalBody;
             modalOverlay.classList.add('active');
         });
 
@@ -700,4 +920,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Initialiser la langue au chargement de la page
+    setLanguage(languageSelect.value);
 });
