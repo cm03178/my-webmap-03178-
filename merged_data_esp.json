@@ -1,0 +1,664 @@
+[
+  {
+    "nom": "Ciclo de Ingeniero Geómetra-Topógrafo",
+    "dates": "2022 - 2025",
+    "lieu": "Escuela Superior de Ingenieros Geómetras y Topógrafos (ESGT-CNAM), Le Mans, Sarthe (72), FRANCIA",
+    "membres": null,
+    "type": "Formación",
+    "statut": "Estudiante",
+    "domaines": [
+      "Ingeniería",
+      "Topografía",
+      "Geomática",
+      "Ordenación del Territorio",
+      "Derecho",
+      "Redes y Servicios Diversos (VRD)",
+      "Informática",
+      "Gestión de proyectos"
+    ],
+    "competences": [
+      "Levantamiento topográfico",
+      "Levantamiento con escáner láser",
+      "Levantamiento de interiores",
+      "Levantamiento fotogramétrico",
+      "Procesamiento de datos láser",
+      "Procesamiento de datos topográficos",
+      "Procesamiento fotogramétrico",
+      "CAD",
+      "Procesamiento Digital de Imágenes",
+      "Gestión de bases de datos",
+      "Gestión de SIG",
+      "Gestión de proyectos",
+      "Operaciones catastrales/inmobiliarias",
+      "Urbanismo",
+      "Capacidad para trabajar con seguridad"
+    ],
+    "description_mission": null,
+    "matériels": [
+      "Estaciones totales Leica/Trimble",
+      "Escáneres 3D Leica/Trimble",
+      "Receptores GNSS Trimble/Teria",
+      "Drones DJI"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Covadis",
+      "QGIS",
+      "Leica Cyclone",
+      "Leica Infinity",
+      "Agisoft Metashape",
+      "ArcGis Pro",
+      "PostgreSQL",
+      "Suite Office"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      48.0189342,
+      0.1547745
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_esgt.jpg",
+        "image_caption": "Escuela Superior de Ingenieros Geómetras y Topógrafos",
+        "image_source": "Source: Polytech https://urlr.me/59v8XK"
+      }
+    ]
+  },
+  {
+    "nom": "Diploma de Técnico Superior (BTS) en Profesión de Geómetra Topógrafo y Modelado Digital (MGTMN)",
+    "dates": "2020 - 2022",
+    "lieu": "Lycée Le Caousou, Toulouse, Haute-Garonne (31), FRANCIA",
+    "membres": null,
+    "type": "Formación",
+    "statut": "Estudiante",
+    "domaines": [
+      "Topografía",
+      "Geomática",
+      "Ordenación del Territorio",
+      "Derecho",
+      "Redes y Servicios Diversos (VRD)",
+      "Informática",
+      "Gestión de proyectos"
+    ],
+    "competences": [
+      "Levantamiento topográfico",
+      "Levantamiento con escáner láser",
+      "Levantamiento de interiores",
+      "Levantamiento fotogramétrico",
+      "Procesamiento de datos láser",
+      "Procesamiento de datos topográficos",
+      "Procesamiento fotogramétrico",
+      "CAD",
+      "Operaciones catastrales/inmobiliarias",
+      "Gestión de proyectos",
+      "Trabajo colaborativo",
+      "Capacidad para trabajar con seguridad"
+    ],
+    "description_mission": "Formación en los oficios de la topografía, la geomática y el modelado digital. Adquisición de las competencias técnicas y teóricas para los levantamientos, el procesamiento de datos y la producción de planos.",
+    "materiels": [
+      "Estaciones totales Leica",
+      "Escáneres 3D Leica",
+      "Receptores GNSS Trimble",
+      "Drones DJI"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Covadis",
+      "Agisoft Metashape",
+      "Suite Office"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      43.5997962,
+      1.4614579
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_le_caousou.jfif",
+        "image_caption": "Establecimiento escolar Le Caousou",
+        "image_source": "Source: Le Caousou https://urlr.me/2BNdt5 "
+      }
+    ]
+  },
+  {
+    "nom": "Misión D10 - Escuela Francesa de Atenas",
+    "dates": "Julio 2024",
+    "lieu": "Santuario de Apolo, Delfos, GRECIA",
+    "membres": "Sr. Jean-Marc LUCE (dir. de misión, profesor-investigador); Sr. Lionel FADIN (tutor de prácticas, ingeniero en la EfA); Sra. Audrey FOURTET, Sarah ANNEL, Emilie SOUERES, Manuel CASTET (estudiantes).",
+    "type": "Misión de excavación arqueológica",
+    "statut": "Voluntario",
+    "domaines": [
+      "Patrimonio",
+      "Modelado 3D",
+      "GNSS",
+      "CAD",
+      "Topografía",
+      "Pedagogía"
+    ],
+    "description_mission": [
+      "Becario voluntario en una misión (D10) bajo la égida de la Escuela Francesa de Atenas, dirigida por el Sr. Jean-Marc LUCE, en el sitio arqueológico de Delfos (Santuario de Apolo), Grecia.",
+      "Levantamiento de puntos de interés mediante un receptor GNSS (límites, alturas de los muros de cerramiento, Hi-Target V200)."
+    ],
+    "materiels": [
+      "Receptor GNSS Hi-Target V200"
+    ],
+    "softwares": [
+      "AutoCAD Map",
+      "Suite Office"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      38.4821117,
+      22.5015889
+    ],
+    "images_data": []
+  },
+  {
+    "nom": "Misión D28 - Escuela Francesa de Atenas",
+    "dates": "Julio - Agosto 2024",
+    "lieu": "Terrazas de Marmaria, Delfos, GRECIA",
+    "membres": "Sandrine HUBER (dir. de misión, profesora-investigadora), Lionel FADIN (tutor de prácticas, ingeniero en la EfA); así como las Universidades de Lille, Estrasburgo y Padua; el CNRS",
+    "type": "Misión de excavación arqueológica",
+    "statut": "Voluntario",
+    "domaines": [
+      "Patrimonio",
+      "Modelado 3D",
+      "Topografía",
+      "Fotogrametría",
+      "Pedagogía"
+    ],
+    "competences": [
+      "Levantamiento topográfico",
+      "Levantamiento fotogramétrico",
+      "Procesamiento de datos topográficos",
+      "Procesamiento fotogramétrico",
+      "CAD",
+      "Procesamiento Digital de Imágenes",
+      "Gestión de bases de datos",
+      "Trabajo colaborativo",
+      "Capacidad para trabajar con seguridad"
+    ],
+    "description_mission": [
+      "Becario voluntario en una misión (D28) bajo la égida de la Escuela Francesa de Atenas y dirigida por la Sra. Sandrine HUBER, en el sitio arqueológico de Delfos (Terrazas de Marmaria), Grecia.",
+      "Levantamiento de puntos de interés (límites de sondeos, material arqueológico desenterrado, unidades estratigráficas, Leica TS06+) dentro de los sondeos de excavación, catalogados en un SIG, facilitando los estudios realizados por las diferentes partes.",
+      "Modelado 3D de los sondeos por fotogrametría con el fin de documentar las capas sedimentarias y el material arqueológico descubierto.",
+      "Archivo de los datos (coordenadas, naturaleza del punto, identificación estratigráfica, identificación del material, ortoimágenes), permitiendo filtrar y obtener datos específicos.",
+      "Enlace al informe oficial de la EfA: https://urlr.me/rPsKbC"
+    ],
+    "materiels": [
+      "Estación total Leica TS06+",
+      "Cámara fotográfica digital Canon"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Pix4D",
+      "Suite Office"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      38.4801361,
+      22.5082585
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_delphes_marmaria_1.jpg",
+        "image_caption": "Estación TS06+, M.CASTET, L.FADIN (de izquierda a derecha)",
+        "image_source": "Source: Fotografía personal"
+      },
+      {
+        "image_path": "images/image_delphes_marmaria_3.jpg",
+        "image_caption": "M.CASTET, estación total Leica TS06+",
+        "image_source": "Source: Fotografía personal"
+      },
+      {
+        "image_path": "images/image_delphes_marmaria_4.jpg",
+        "image_caption": "Estación TS06+, yo mismo, Lionel Fadin (de izquierda a derecha)",
+        "image_source": "Source: Fotografía personal"
+      },
+      {
+        "image_path": "images/image_delphes_marmaria_5.jpg",
+        "image_caption": "El equipo de excavación 2024",
+        "image_source": "Source: A.MAZZARIOL, Universidad de Padua https://urlr.me/m8QR7h"
+      }
+    ]
+  },
+  {
+    "titre": "Monitorización del Glaciar de Arcouzan (altitud aprox. 2400m)",
+    "dates": "Octubre 2021",
+    "lieu": "Glaciar de Arcouzan, Mont Valier, Seix, Ariège (09), FRANCIA",
+    "membres": "Sr. Guillaume BERNOLE y Sr. Bruno COLAS (Guías de alta montaña); Sr. Jean-Sébastien RIVERE, Sr. Vincent BERTHAUD y Sr. Aurélien VEAUTE (Geómetras Expertos); Sr. Philippe SABLAYROLLES (responsables pedagógicos BTS MGTMN); Sra. Aurore BRILLAC, Sr. Rémi LOURDEAUX y Manuel CASTET (estudiantes); Sr. Farhes MAHI (Sociedad Teria); Sr. Jasper VOS (Sociedad Topcon)",
+    "type": "Expedición científica",
+    "statut": "Voluntario",
+    "domaines": [
+      "Monitorización",
+      "Fotogrametría",
+      "Escaneo 3D",
+      "GNSS",
+      "Entorno Extremo"
+    ],
+    "competences": [
+      "Manejo de instrumentos topográficos",
+      "Iniciación a las técnicas de levantamiento aéreo por drone DJI Mavic Pro",
+      "Capacidad para trabajar con seguridad",
+      "Capacidad para gestionar el esfuerzo físico",
+      "Trabajo colaborativo"
+    ],
+    "description_mission": [
+      "Organización y preparación del material de expedición (trípodes, antenas GNSS, escáner 3D) para el porteo y el ascenso (1300m D+) hasta el Refugio des Estagnous (2246m).",
+      "Despliegue de un receptor GNSS (base, Topcon HiPer VR) en el collado de Valiérat y descenso encordado hacia el sitio glaciar, bajo la supervisión de guías de alta montaña.",
+      "Levantamiento de puntos, mediante un escáner 3D Topcon GLS-2000, un receptor GNSS (móvil, enlace del escaneo y de la toma de vistas, Topcon HiPer VR) así como un dron (DJI Mavic Pro), sobre la superficie del glaciar para medir su evolución (deslizamiento, derretimiento, grietas).",
+      "Colaboración dentro de un equipo multidisciplinario en entorno hostil (Geómetras Expertos, Guías de alta montaña, Geólogos, Representantes Teria/Topcon)."
+    ],
+    "materiels": [
+      "Escáner 3D Topcon GLS-2000",
+      "Receptor GNSS Topcon HiPer VR (x2)",
+      "Receptor GNSS Teria PYX",
+      "Dron DJI Mavic Pro"
+    ],
+    "softwares": null,
+    "lien_pdf": null,
+    "latlon": [
+      42.7988968,
+      1.0876264
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_glacier_arcouzan_3.jfif",
+        "image_caption": "El equipo CAOUSOU: A.VEAUTE, A.BRILLAC, M.CASTET, J-S.RIVERE, P.SABLAYROLLES, R.LOURDEAUX (de izquierda a derecha)",
+        "image_source": "Source: Fotografía de Philippe SABLAYROLLES, revista XYZ n°172"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_2.jfif",
+        "image_caption": "Instalación de un receptor GNSS (base) Topcon Hyper-VR",
+        "image_source": "Source: Fotografía de Philippe Sablayrolles, revista XYZ n°172"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_1.jfif",
+        "image_caption": null,
+        "image_source": "Source: Fotografía de Philippe Sablayrolles https://urlr.me/hr36Qt"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_4.jfif",
+        "image_caption": "Demostración del receptor GNSS (móvil) TopCon Hiper-VR por Jasper Vos",
+        "image_source": "Source: Source: Fotografía de Philippe Sablayrolles https://urlr.me/hr36Qt"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_5.JPG",
+        "image_caption": "Vista desde el interior del glaciar",
+        "image_source": "Source: Fotografía personal"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_6.JPG",
+        "image_caption": "Vista desde la cresta sobre el glaciar de Arcouzan",
+        "image_source": "Source: Fotografía personal"
+      }
+    ]
+  },
+  {
+    "nom": "Misión larga de profesionalización",
+    "dates": "Septiembre - Diciembre 2024",
+    "lieu": "Saint-Pierre-de-Vassols, Vaucluse (84), FRANCIA",
+    "membre": "Théo ROCHAIS (tutor de prácticas, resp. del departamento de topografía)",
+    "type": "Experiencia profesional",
+    "statut": "Becario",
+    "domaines": [
+      "SIG",
+      "Fotogrametría",
+      "GNSS",
+      "Redes y Servicios Diversos",
+      "CAD",
+      "Procesamiento de datos"
+    ],
+    "competences": [
+      "Levantamiento topográfico",
+      "Levantamiento fotogramétrico",
+      "Procesamiento de datos topográficos",
+      "Procesamiento fotogramétrico",
+      "Gestión de proyectos",
+      "Redes y Servicios Diversos (VRD)",
+      "Trabajo colaborativo",
+      "Capacidad para trabajar con seguridad",
+      "Pedagogía"
+    ],
+    "description_mission": [
+      "Realización de una misión larga de profesionalización de cuatro meses (Septiembre - Diciembre 2024) en la empresa GRAPHEAU, oficina de ingeniería, bajo la supervisión del Sr. Théo ROCHAIS (resp. departamento de topografía), ubicada en St Pierre de Vassols.",
+      "El objetivo principal de la misión era la optimización de las etapas de adquisición y procesamiento de datos, centrándose en las redes de aguas pluviales de la ciudad de Orange.",
+      "Establecimiento y conducción de campañas de levantamientos combinados: GNSS NRTK (Leica GS07, Land2Map, Teria) y fotogramétrico (GoPro Hero 8 en pértiga) para la cartografía de las redes.",
+      "Procesamiento completo de los datos adquiridos en campo (Land2Map, servicio en línea Geosnap, AutoCAD).",
+      "Integración de los datos procesados en un SIG municipal utilizando QGIS."
+    ],
+    "materiels": [
+      "Receptores GNSS Leica/Spectra",
+      "Cámara GoPro Hero 8",
+      "Pack emisor, aguja, detector Vivax",
+      "Georradar USRADAR Quantum Imager"
+    ],
+    "softwares": [
+      "QGIS",
+      "AutoCAD",
+      "Land2Map",
+      "Geosnap"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      44.090863,
+      5.1418979
+    ],
+    "images_data": []
+  },
+  {
+    "nom": "SR Topo - Modelado del dominio público",
+    "dates": "Enero 2023",
+    "lieu": "Cesseville, Eure (27), FRANCIA",
+    "membres": "Emilien CREVEL, Manuel CASTET (estudiantes)",
+    "type": "Experiencia profesional",
+    "statut": "Servicio puntual",
+    "domaines": [
+      "SIG",
+      "Topografía",
+      "CAD",
+      "Gestión de patrimonio"
+    ],
+    "competences": [
+      "Gestión de SIG",
+      "Manejo de instrumentos topográficos",
+      "Recolección de datos para la alimentación de una base de datos",
+      "Procesamiento de datos",
+      "Trabajo colaborativo",
+      "Gestión de proyectos"
+    ],
+    "description_mission": [
+      "Participación en dos misiones de levantamientos topográficos para la Junior-Empresa SR Topo (Enero y Octubre 2023) en Cesseville y Ecquetot.",
+      "Realización de un levantamiento topográfico de los cementerios con el objetivo de producir un plano de estado actual exhaustivo así como un plano de amueblamiento futuro para los ayuntamientos.",
+      "Recolección exhaustiva de los datos de censo (nombre, fechas de nacimiento/fallecimiento) y fotografías de cada sepultura para integración en la base de datos.",
+      "Procesamiento de datos, realización de operaciones de CAD, y construcción del Sistema de Información Geográfica (SIG) con la ayuda del software QGIS.",
+      "Trabajo colaborativo dentro de una Junior-Empresa y **desarrollo de competencias** gracias a la asistencia de las promociones superiores."
+    ],
+    "materiels": [
+      "Estación total Trimble S5",
+      "Receptor GNSS Trimble R8"
+    ],
+    "softwares": [
+      "QGIS",
+      "AutoCAD",
+      "Excel"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      49.1809637,
+      0.9782016
+    ],
+    "images_data": [
+      {
+        "image_path": "images/sr_topo_2.jpg",
+        "image_caption": "Emilien Crevel, Manuel CASTET (de izquierda a derecha)",
+        "image_source": "Source: Fotografía personal"
+      }
+    ]
+  },
+  {
+    "nom": "SR Topo - Modelado del dominio público",
+    "dates": "Octubre 2023",
+    "lieu": "Ecquetot, Eure (27), FRANCIA",
+    "membre": "Emilien CREVEL, Mathieu MARTINEZ, Manuel CASTET (estudiantes)",
+    "type": "Experiencia profesional",
+    "statut": "Servicio puntual",
+    "domaines": [
+      "SIG",
+      "Topografía",
+      "CAD",
+      "Gestión de patrimonio"
+    ],
+    "competences": [
+      "Gestión de SIG",
+      "Manejo de instrumentos topográficos",
+      "Recolección de datos para la alimentación de una base de datos",
+      "Procesamiento de datos",
+      "Trabajo colaborativo",
+      "Gestión de proyectos"
+    ],
+    "description_mission": [
+      "Participación en dos misiones de levantamientos topográficos para la Junior-Empresa SR Topo (Enero y Octubre 2023) en Cesseville y Ecquetot.",
+      "Realización de un levantamiento topográfico de los cementerios con el objetivo de producir un plano de estado actual exhaustivo así como un plano de amueblamiento futuro para los ayuntamientos.",
+      "Recolección exhaustiva de los datos de censo (nombre, fechas de nacimiento/fallecimiento) y fotografías de cada sepultura para integración en la base de datos.",
+      "Procesamiento de datos, realización de operaciones de CAD, y construcción del Sistema de Información Geográfica (SIG) con la ayuda del software QGIS.",
+      "Trabajo colaborativo dentro de una Junior-Empresa y **desarrollo de competencias** gracias a la asistencia de las promociones superiores."
+    ],
+    "materiels": [
+      "Estación total Trimble S5",
+      "Receptor GNSS Trimble R8"
+    ],
+    "softwares": [
+      "QGIS",
+      "AutoCAD",
+      "Excel"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      49.1707774,
+      1.0116639
+    ],
+    "images_data": [
+      {
+        "image_path": "images/sr_topo_1.JPG",
+        "image_caption": "Emilien Crevel, yo mismo, Mathieu Martinez (de izquierda a derecha)",
+        "image_source": "Source: Fotografía personal"
+      }
+    ]
+  },
+  {
+    "titre": "Excavaciones arqueológicas en Castella de Labarre",
+    "dates": "Junio - Septiembre 2021",
+    "lieu": "Castella de Labarre, Foix, Ariège (09), FRANCIA",
+    "membres": "Sr. Laurent CLAEYS (dir. de excavaciones, arqueólogo); Sr. Philippe SABLAYROLLES (resp. pedag. BTS MGTMN); Sr. Philippe BOSCARIOL (Geómetra Experto), Sra. Aurore BRILLAC, Sra. Mathilde SERRES, Sr. Hugo FAVRAIS y Manuel CASTET (estudiantes)",
+    "type": "Misión de excavación arqueológica",
+    "statut": "Voluntario",
+    "domaines": [
+      "Topografía",
+      "Fotogrametría",
+      "Arqueología",
+      "Patrimonio"
+    ],
+    "competences": [
+      "Manejo de instrumentos topográficos",
+      "Levantamiento fotogramétrico",
+      "Trabajo colaborativo",
+      "Capacidad para trabajar con seguridad"
+    ],
+    "description_mission": [
+      "Definición de las necesidades de acuerdo con los objetivos de estudio del arqueólogo (Sr. Laurent CLAEYS).",
+      "Realización de levantamientos topográficos del sitio y de los fosos que bordean la fortificación con el objetivo de actualizar los planos (estación total Leica TS07).",
+      "Modelado fotogramétrico (adquisición, georreferenciación) para modelar los elementos arqueológicos (muro en ruinas, sondeos).",
+      "Colaboración dentro de un equipo de geómetras (BTS MGTMN y Geómetra Experto) y participación activa en las excavaciones junto a los becarios arqueólogos."
+    ],
+    "materiels": [
+      "Estación total Leica TS07",
+      "Cámara fotográfica digital"
+    ],
+    "softwares": null,
+    "lien_pdf": null,
+    "latlon": [
+      42.9966123,
+      1.6177361
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_castella_de_labarre_1.jpg",
+        "image_caption": "Sondeadores bajo la mirada de L.CLAEYS.",
+        "image_source": "Source: LaDépêche https://urlr.me/wSH9Xs "
+      },
+      {
+        "image_path": "images/image_castella_de_labarre_2.jfif",
+        "image_caption": "Ruina de edificio (muro)",
+        "image_source": "Source: Fotografía de Philippe Sablayrolles https://urlr.me/HsbF6T"
+      }
+    ]
+  },
+  {
+    "nom": "Cabinet G.O Mètres",
+    "dates": "Julio - Agosto 2021",
+    "lieu": "Carbonne, Haute-Garonne (31), FRANCIA",
+    "membres": null,
+    "type": "Experiencia profesional",
+    "statut": "Técnico asalariado",
+    "domaines": [
+      "Catastro/Inmobiliario",
+      "Topografía",
+      "CAD",
+      "Gestión de datos",
+      "Dirección de obra"
+    ],
+    "competences": [
+      "Operaciones catastrales/inmobiliarias",
+      "Manejo de instrumentos topográficos",
+      "Gestión, archivo y referenciación de datos",
+      "Dirección de obra",
+      "Capacidad para integrarse rápidamente y beneficiarse de la retroalimentación de los directores Ingenieros"
+    ],
+    "description_mission": [
+      "Adquisición de experiencia profesional como asistente de geómetra durante dos meses (Julio-Agosto 2021) en el Cabinet G.O METRES.",
+      "Puesta en práctica y consolidación de los conocimientos y técnicas aprendidos durante el 1er año de BTS MGTMN y en prácticas.",
+      "Realización de varias misiones de carácter catastral: deslindes y divisiones parcelarias para diferentes tipologías de clientes (particulares, promotores, colectividades).",
+      "Refuerzo del uso de las herramientas de adquisición de datos: estaciones totales y receptores GNSS.",
+      "Participación en asuntos de Dirección de Obra y gestión del archivo documental y la referenciación de expedientes en Géofoncier."
+    ],
+    "materiels": [
+      "Estación total Trimble S9",
+      "Receptor GNSS Trimble R6/R12"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Covadis",
+      "Moduléo",
+      "Géofoncier"
+    ],
+    "latlon": [
+      43.297104,
+      1.2182919
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_go_metre_1 (1).jpg",
+        "image_caption": "O.Castex",
+        "image_source": "Source: G.O Mètres https://urlr.me/q84yj5"
+      },
+      {
+        "image_path": "images/image_go_metre_2.jpg",
+        "image_caption": "J.DE MANDIARGUES, O.CASTEX, J.CORAN",
+        "image_source": "Source: G.O Mètres https://urlr.me/q84yj5"
+      }
+    ]
+  },
+  {
+    "nom": "Cabinet Acti-Géo",
+    "dates": "Mayo - Junio 2021",
+    "lieu": "Toulouse, Haute-Garonne (31), FRANCIA",
+    "type": "Experiencia profesional",
+    "statut": "Becario",
+    "domaines": [
+      "Batimetría",
+      "Modelado 3D",
+      "Fotogrametría",
+      "Topografía"
+    ],
+    "competences": [
+      "Implementación de instrumentos topográficos",
+      "Modelado 3D",
+      "Levantamiento de interiores",
+      "Levantamiento batimétrico",
+      "Levantamiento fotogramétrico",
+      "Procesamiento fotogramétrico",
+      "CAD",
+      "Gestión de proyectos",
+      "Operaciones catastrales/inmobiliarias",
+      "Trabajo colaborativo",
+      "Capacidad para trabajar con seguridad"
+    ],
+    "description_mission": [
+      "Realización de prácticas de fin de 1er año (Mayo-Junio 2021) en el Cabinet Acti-Géo, dirigido por el Sr. Laurent TASSEL, enfocado en nuevas tecnologías.",
+      "Puesta en práctica profesional de los métodos y herramientas adquiridos en formación (BTS MGTMN).",
+      "Levantamientos topográficos mediante una estación total (Trimble S7) y un receptor GNSS (Trimble R8).",
+      "Procesamiento de datos (Covadis, AutoCAD).",
+      "Participación en misiones innovadoras que implican el uso de drones: levantamientos batimétricos de lagos de canteras con el aqua-drone (WaterRobotics), georreferenciación y seguimiento de trayectoria en tiempo real (RTK, Septentrio NR3, Qinsy).",
+      "Levantamiento de interiores y de fachada con un escáner 3D (Zoller+Fröhlich 5016) y procesamiento de datos (Trimble Realworks, CloudCompare).",
+      "Levantamiento fotogramétrico con un dron DJI Mavic Pro y procesamiento de datos (Agisoft Metashape) para la realización de ortoimágenes.",
+      "Adquisición de los principios de organización de una misión, desde la solicitud del cliente hasta la entrega de los productos finales.",
+      "Manejo de datos relativos a operaciones catastrales y contribución a la redacción de actas inmobiliarias (SPF, Géofoncier, Word)."
+    ],
+    "materiels": [
+      "Aqua-drone Water Robotics",
+      "Escáner 3D Zoller+Fröhlich 5016",
+      "Estación total Trimble S7",
+      "Receptor GNSS Trimble R8",
+      "Receptor Septentrio Altus NR3",
+      "Dron DJI Mavic Pro"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Qinsy",
+      "Covadis",
+      "Agisoft Metashape",
+      "CloudCompare",
+      "Géofoncier"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      43.6303502,
+      1.4376583
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image-actigeo_1.jpg",
+        "image_caption": "M.CASTET",
+        "image_source": "Source: Fotografía personal"
+      },
+      {
+        "image_path": "images/image_actigeo_2.jpg",
+        "image_caption": "Aquadrone WaterRobotics, equipado con un receptor GNSS Septentrio Altus NR3 y una GoPro",
+        "image_source": "Source: Acti-Géo https://urlr.me/wZ8uJ9"
+      }
+    ]
+  },
+  {
+    "nom": "Cabinet GILG Géomètre 81",
+    "dates": "Marzo - Julio 2020",
+    "lieu": "Rabastens (81)",
+    "membres": null,
+    "type": "Experiencia profesional",
+    "statut": "Becario",
+    "domaines": [
+      "Topografía",
+      "Catastro/Inmobiliario",
+      "CAD"
+    ],
+    "competences": [
+      "Manejo de instrumentos topográficos",
+      "Procesamiento de datos topográficos",
+      "CAD",
+      "Operaciones catastrales/inmobiliarias",
+      "Capacidad de integración y familiarización"
+    ],
+    "description_mission": [
+      "Iniciación a las prácticas profesionales del Geómetra Experto tras dos jornadas de descubrimiento (marzo 2020) en el gabinete del Sr. Franck GILG.",
+      "Familiarización con la instalación y el manejo de las herramientas de levantamiento: estación total y receptor GNSS.",
+      "Adquisición de las bases del dominio catastral y comprensión del rol de mediación inherente a la profesión de Geómetra-Experto.",
+      "Procesamiento y explotación de los datos de campo adquiridos mediante el uso del software especializado Covadis.",
+      "Iniciación a la redacción de diferentes planos en un entorno de Diseño Asistido por Computadora (CAD) en AutoCAD y al procesamiento de geobase (Covadis)."
+    ],
+    "materiels": [
+      "Estación total",
+      "Receptor GNSS"
+    ],
+    "softwares": [
+      "Covadis",
+      "AutoCAD",
+      "Géofoncier"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      43.823018,
+      1.7233592
+    ],
+    "images_data": []
+  }
+]

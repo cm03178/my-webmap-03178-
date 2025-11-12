@@ -1,0 +1,664 @@
+[
+  {
+    "nom": "Geomatics Engineer Program",
+    "dates": "2022 - 2025",
+    "lieu": "Graduate School of Surveying and Topography Engineers (ESGT-CNAM), Le Mans, Sarthe (72), FRANCE",
+    "membres": null,
+    "type": "Education",
+    "statut": "Student",
+    "domaines": [
+      "Engineering",
+      "Surveying",
+      "Geomatics",
+      "Land Planning",
+      "Law",
+      "Utilities and Networks (VRD)",
+      "IT",
+      "Project Management"
+    ],
+    "competences": [
+      "Topographic survey",
+      "Laser scanning survey",
+      "Interior survey",
+      "Photogrammetric survey",
+      "Laser scanning data processing",
+      "Topographic data processing",
+      "Photogrammetric processing",
+      "CAD",
+      "Digital Image Processing",
+      "Database management",
+      "GIS management",
+      "Project management",
+      "Land/Cadastral operations",
+      "Urban planning",
+      "Ability to work safely"
+    ],
+    "description_mission": null,
+    "matériels": [
+      "Leica/Trimble Total Stations",
+      "Leica/Trimble 3D Scanners",
+      "Trimble/Teria GNSS Receivers",
+      "DJI Drones"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Covadis",
+      "QGIS",
+      "Leica Cyclone",
+      "Leica Infinity",
+      "Agisoft Metashape",
+      "ArcGis Pro",
+      "PostgreSQL",
+      "Office Suite"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      48.0189342,
+      0.1547745
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_esgt.jpg",
+        "image_caption": "Graduate School of Surveying and Topography Engineers",
+        "image_source": "Source: Polytech https://urlr.me/59v8XK"
+      }
+    ]
+  },
+  {
+    "nom": "Advanced Technician's Certificate (BTS) in Surveying and Digital Modeling (MGTMN)",
+    "dates": "2020 - 2022",
+    "lieu": "Lycée Le Caousou, Toulouse, Haute-Garonne (31), FRANCE",
+    "membres": null,
+    "type": "Education",
+    "statut": "Student",
+    "domaines": [
+      "Surveying",
+      "Geomatics",
+      "Land Planning",
+      "Law",
+      "Utilities and Networks (VRD)",
+      "IT",
+      "Project Management"
+    ],
+    "competences": [
+      "Topographic survey",
+      "Laser scanning survey",
+      "Interior survey",
+      "Photogrammetric survey",
+      "Laser scanning data processing",
+      "Topographic data processing",
+      "Photogrammetric processing",
+      "CAD",
+      "Land/Cadastral operations",
+      "Project management",
+      "Collaborative work",
+      "Ability to work safely"
+    ],
+    "description_mission": "Training in surveying, geomatics, and digital modeling. Acquisition of technical and theoretical skills for surveys, data processing, and plan production.",
+    "materiels": [
+      "Leica Total Stations",
+      "Leica 3D Scanners",
+      "Trimble GNSS Receivers",
+      "DJI Drones"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Covadis",
+      "Agisoft Metashape",
+      "Office Suite"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      43.5997962,
+      1.4614579
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_le_caousou.jfif",
+        "image_caption": "Le Caousou Educational Establishment",
+        "image_source": "Source: Le Caousou https://urlr.me/2BNdt5 "
+      }
+    ]
+  },
+  {
+    "nom": "Mission D10 - French School of Athens",
+    "dates": "July 2024",
+    "lieu": "Sanctuary of Apollo, Delphi, GREECE",
+    "membres": "Mr. Jean-Marc LUCE (Mission Director, Professor-Researcher); Mr. Lionel FADIN (Internship Supervisor, Engineer at EfA); Ms. Audrey FOURTET, Sarah ANNEL, Emilie SOUERES, Manuel CASTET (students).",
+    "type": "Archaeological Excavation Mission",
+    "statut": "Volunteer",
+    "domaines": [
+      "Heritage",
+      "3D Modeling",
+      "GNSS",
+      "CAD",
+      "Surveying",
+      "Pedagogy"
+    ],
+    "description_mission": [
+      "Volunteer intern on a mission (D10) under the aegis of the French School at Athens, directed by Mr. Jean-Marc LUCE, at the archaeological site of Delphi (Sanctuary of Apollo), Greece.",
+      "Survey of points of interest using a GNSS receiver (extents, heights of enclosure walls, Hi-Target V200)."
+    ],
+    "materiels": [
+      "Hi-Target V200 GNSS Receiver"
+    ],  
+    "softwares": [
+      "AutoCAD Map",
+      "Office Suite"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      38.4821117,
+      22.5015889
+    ],
+    "images_data": []
+  },
+  {
+    "nom": "Mission D28 - French School of Athens",
+    "dates": "July - August 2024",
+    "lieu": "Marmaria Terraces, Delphi, GREECE",
+    "membres": "Sandrine HUBER (Mission Director, Professor-Researcher), Lionel FADIN (Internship Supervisor, Engineer at EfA); as well as the Universities of Lille, Strasbourg, and Padua; the CNRS",
+    "type": "Archaeological Excavation Mission",
+    "statut": "Volunteer",
+    "domaines": [
+      "Heritage",
+      "3D Modeling",
+      "Surveying",
+      "Photogrammetry",
+      "Pedagogy"
+    ],
+    "competences": [
+      "Topographic survey",
+      "Photogrammetric survey",
+      "Topographic data processing",
+      "Photogrammetric processing",
+      "CAD",
+      "Digital Image Processing",
+      "Database management",
+      "Collaborative work",
+      "Ability to work safely"
+    ],
+    "description_mission": [
+      "Volunteer intern on a mission (D28) under the aegis of the French School at Athens and directed by Ms. Sandrine HUBER, at the archaeological site of Delphi (Marmaria Terraces), Greece.",
+      "Survey of points of interest (excavation limits, unearthed archaeological material, stratigraphic units, Leica TS06+) within the excavation trenches, recorded in a GIS, facilitating studies conducted by the different parties.",
+      "3D modeling of the trenches through photogrammetry to document sedimentary layers and discovered archaeological material.",
+      "Data archiving (coordinates, point nature, stratigraphic identification, material identification, orthoimages), allowing for filtering and obtaining specific data.",
+      "Link to the official EfA report: https://urlr.me/rPsKbC"
+    ],
+    "materiels": [
+      "Leica TS06+ Total Station",
+      "Canon digital camera"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Pix4D",
+      "Office Suite"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      38.4801361,
+      22.5082585
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_delphes_marmaria_1.jpg",
+        "image_caption": "TS06+ Station, M.CASTET, L.FADIN (from left to right)",
+        "image_source": "Source: Personal photograph"
+      },
+      {
+        "image_path": "images/image_delphes_marmaria_3.jpg",
+        "image_caption": "M.CASTET, Leica TS06+ total station",
+        "image_source": "Source: Personal photograph"
+      },
+      {
+        "image_path": "images/image_delphes_marmaria_4.jpg",
+        "image_caption": "TS06+ Station, myself, Lionel Fadin (from left to right)",
+        "image_source": "Source: Personal photograph"
+      },
+      {
+        "image_path": "images/image_delphes_marmaria_5.jpg",
+        "image_caption": "The 2024 excavation team",
+        "image_source": "Source: A.MAZZARIOL, University of Padua https://urlr.me/m8QR7h"
+      }
+    ]
+  },
+  {
+    "titre": "Monitoring of the Arcouzan Glacier (altitude approx. 2400m)",
+    "dates": "October 2021",
+    "lieu": "Arcouzan Glacier, Mont Valier, Seix, Ariège (09), FRANCE",
+    "membres": "Mr. Guillaume BERNOLE and Mr. Bruno COLAS (High-Mountain Guides); Mr. Jean-Sébastien RIVERE, Mr. Vincent BERTHAUD and Mr. Aurélien VEAUTE (Chartered Surveyors); Mr. Philippe SABLAYROLLES (BTS MGTMN pedagogical coordinators); Ms. Aurore BRILLAC, Mr. Rémi LOURDEAUX and Manuel CASTET (students); Mr. Farhes MAHI (Teria Company); Mr. Jasper VOS (Topcon Company)",
+    "type": "Scientific Expedition",
+    "statut": "Volunteer",
+    "domaines": [
+      "Monitoring",
+      "Photogrammetry",
+      "3D Scan",
+      "GNSS",
+      "Extreme Environment"
+    ],
+    "competences": [
+      "Handling of surveying instruments",
+      "Introduction to aerial survey techniques using DJI Mavic Pro drone",
+      "Ability to work safely",
+      "Ability to manage physical exertion",
+      "Collaborative work"
+    ],
+    "description_mission": [
+      "Organization and preparation of expedition equipment (tripods, GNSS antennas, 3D scanner) for carrying and ascent (1300m D+) to the Refuge des Estagnous (2246m).",
+      "Deployment of a GNSS receiver (base, Topcon HiPer VR) at the Col du Valiérat and roped descent to the glacier site, under the supervision of high-mountain guides.",
+      "Survey of points, using a Topcon GLS-2000 3D scanner, a GNSS receiver (mobile, linking the scan and the image capture, Topcon HiPer VR), and a drone (DJI Mavic Pro), on the glacier's surface to measure its evolution (movement, melting, crevasses).",
+      "Collaboration within a multidisciplinary team in an ostile environment (Chartered Surveyors, High-Mountain Guides, Geologists, Teria/Topcon Representatives)."
+    ],
+    "materiels": [
+      "Topcon GLS-2000 3D Scanner",
+      "Topcon HiPer VR GNSS Receiver (x2)",
+      "Teria PYX GNSS Receiver",
+      "DJI Mavic Pro Drone"
+    ],
+    "softwares": null,
+    "lien_pdf": null,
+    "latlon": [
+      42.7988968,
+      1.0876264
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_glacier_arcouzan_3.jfif",
+        "image_caption": "The CAOUSOU team: A.VEAUTE, A.BRILLAC, M.CASTET, J-S.RIVERE, P.SABLAYROLLES, R.LOURDEAUX (from left to right)",
+        "image_source": "Source: Photograph by Philippe SABLAYROLLES, XYZ review n°172"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_2.jfif",
+        "image_caption": "Installation of a Topcon Hyper-VR GNSS receiver (base)",
+        "image_source": "Source: Photograph by Philippe Sablayrolles, XYZ review n°172"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_1.jfif",
+        "image_caption": null,
+        "image_source": "Source: Photograph by Philippe Sablayrolles https://urlr.me/hr36Qt"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_4.jfif",
+        "image_caption": "Demonstration of the TopCon Hiper-VR GNSS receiver (mobile) by Jasper Vos",
+        "image_source": "Source: Source: Photograph by Philippe Sablayrolles https://urlr.me/hr36Qt"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_5.JPG",
+        "image_caption": "View from inside the glacier",
+        "image_source": "Source: Personal photograph"
+      },
+      {
+        "image_path": "images/image_glacier_arcouzan_6.JPG",
+        "image_caption": "View from the ridge over the Arcouzan glacier",
+        "image_source": "Source: Personal photograph"
+      }
+    ]
+  },
+  {
+    "nom": "Long-term professionalizing mission",
+    "dates": "September - December 2024",
+    "lieu": "Saint-Pierre-de-Vassols, Vaucluse (84), FRANCE",
+    "membre": "Théo ROCHAIS (Internship supervisor, head of surveying department)",
+    "type": "Professional Experience",
+    "statut": "Intern",
+    "domaines": [
+      "GIS",
+      "Photogrammetry",
+      "GNSS",
+      "Utilities and Networks",
+      "CAD",
+      "Data Processing"
+    ],
+    "competences": [
+      "Topographic survey",
+      "Photogrammetric survey",
+      "Topographic data processing",
+      "Photogrammetric processing",
+      "Project management",
+      "Utilities and Networks (VRD)",
+      "Collaborative work",
+      "Ability to work safely",
+      "Pedagogy"
+    ],
+    "description_mission": [
+      "Completion of a four-month long-term professionalizing mission (September - December 2024) at GRAPHEAU, an engineering firm, under the supervision of Mr. Théo ROCHAIS (head of surveying department), located in St Pierre de Vassols.",
+      "The main objective of the mission was to optimize data acquisition and processing steps, focusing on the stormwater networks of the city of Orange.",
+      "Implementation and execution of combined survey campaigns: NRTK GNSS (Leica GS07, Land2Map, Teria) and photogrammetric (GoPro Hero 8 on a pole) for network mapping.",
+      "Complete processing of data acquired in the field (Land2Map, Geosnap online service, AutoCAD).",
+      "Integration of processed data into a municipal GIS using QGIS."
+    ],
+    "materiels": [
+      "Leica/Spectra GNSS Receivers",
+      "GoPro Hero 8 Camera",
+      "Vivax transmitter, rod, and detector pack",
+      "USRADAR Quantum Imager GPR"
+    ],
+    "softwares": [
+      "QGIS",
+      "AutoCAD",
+      "Land2Map",
+      "Geosnap"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      44.090863,
+      5.1418979
+    ],
+    "images_data": []
+  },
+  {
+    "nom": "SR Topo - Public Domain Modeling",
+    "dates": "January 2023",
+    "lieu": "Cesseville, Eure (27), FRANCE",
+    "membres": "Emilien CREVEL, Manuel CASTET (students)",
+    "type": "Professional Experience",
+    "statut": "Short-term contract",
+    "domaines": [
+      "GIS",
+      "Surveying",
+      "CAD",
+      "Asset Management"
+    ],
+    "competences": [
+      "GIS management",
+      "Handling of surveying instruments",
+      "Data collection for database entry",
+      "Data processing",
+      "Collaborative work",
+      "Project management"
+    ],
+    "description_mission": [
+      "Participation in two topographic survey missions for the Junior-Enterprise SR Topo (January and October 2023) in Cesseville and Ecquetot.",
+      "Conduction of a topographic survey of cemeteries to produce a comprehensive existing-conditions plan and a future development plan for the town halls.",
+      "Exhaustive collection of census data (name, dates of birth/death) and photographs of each grave for integration into the database.",
+      "Data processing, CAD operations, and construction of the Geographic Information System (GIS) using QGIS software.",
+      "Collaborative work within a Junior-Enterprise and **skill development** thanks to assistance from senior students."
+    ],
+    "materiels": [
+      "Trimble S5 Total Station",
+      "Trimble R8 GNSS Receiver"
+    ],
+    "softwares": [
+      "QGIS",
+      "AutoCAD",
+      "Excel"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      49.1809637,
+      0.9782016
+    ],
+    "images_data": [
+      {
+        "image_path": "images/sr_topo_2.jpg",
+        "image_caption": "Emilien Crevel, Manuel CASTET (from left to right)",
+        "image_source": "Source: Personal photograph"
+      }
+    ]
+  },
+  {
+    "nom": "SR Topo - Public Domain Modeling",
+    "dates": "October 2023",
+    "lieu": "Ecquetot, Eure (27), FRANCE",
+    "membre": "Emilien CREVEL, Mathieu MARTINEZ, Manuel CASTET (students)",
+    "type": "Professional Experience",
+    "statut": "Short-term contract",
+    "domaines": [
+      "GIS",
+      "Surveying",
+      "CAD",
+      "Asset Management"
+    ],
+    "competences": [
+      "GIS management",
+      "Handling of surveying instruments",
+      "Data collection for database entry",
+      "Data processing",
+      "Collaborative work",
+      "Project management"
+    ],
+    "description_mission": [
+      "Participation in two topographic survey missions for the Junior-Enterprise SR Topo (January and October 2023) in Cesseville and Ecquetot.",
+      "Conduction of a topographic survey of cemeteries to produce a comprehensive existing-conditions plan and a future development plan for the town halls.",
+      "Exhaustive collection of census data (name, dates of birth/death) and photographs of each grave for integration into the database.",
+      "Data processing, CAD operations, and construction of the Geographic Information System (GIS) using QGIS software.",
+      "Collaborative work within a Junior-Enterprise and **skill development** thanks to assistance from senior students."
+    ],
+    "materiels": [
+      "Trimble S5 Total Station",
+      "Trimble R8 GNSS Receiver"
+    ],
+    "softwares": [
+      "QGIS",
+      "AutoCAD",
+      "Excel"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      49.1707774,
+      1.0116639
+    ],
+    "images_data": [
+      {
+        "image_path": "images/sr_topo_1.JPG",
+        "image_caption": "Emilien Crevel, myself, Mathieu Martinez (from left to right)",
+        "image_source": "Source: Personal photograph"
+      }
+    ]
+  },
+  {
+    "titre": "Archaeological excavations at Castella de Labarre",
+    "dates": "June - September 2021",
+    "lieu": "Castella de Labarre, Foix, Ariège (09), FRANCE",
+    "membres": "Mr. Laurent CLAEYS (Excavation Director, Archaeologist); Mr. Philippe SABLAYROLLES (Pedag. coord. BTS MGTMN); Mr. Philippe BOSCARIOL (Chartered Surveyor), Ms. Aurore BRILLAC, Ms. Mathilde SERRES, Mr. Hugo FAVRAIS and Manuel CASTET (students)",
+    "type": "Archaeological Excavation Mission",
+    "statut": "Volunteer",
+    "domaines": [
+      "Surveying",
+      "Photogrammetry",
+      "Archaeology",
+      "Heritage"
+    ],
+    "competences": [
+      "Handling of surveying instruments",
+      "Photogrammetric survey",
+      "Collaborative work",
+      "Ability to work safely"
+    ],
+    "description_mission": [
+      "Defining needs in accordance with the archaeologist's (Mr. Laurent CLAEYS) study objectives.",
+      "Carrying out topographic surveys of the site and the ditches bordering the fortification to update the plans (Leica TS07 total station).",
+      "Photogrammetric modeling (acquisition, georeferencing) to model archaeological elements (ruined wall, test pits).",
+      "Collaboration within a team of surveyors (BTS MGTMN and Chartered Surveyor) and active participation in the excavations alongside the archaeologist interns."
+    ],
+    "materiels": [
+      "Leica TS07 Total Station",
+      "Digital camera"
+    ],
+    "softwares": null,
+    "lien_pdf": null,
+    "latlon": [
+      42.9966123,
+      1.6177361
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_castella_de_labarre_1.jpg",
+        "image_caption": "Excavators under the eye of L.CLAEYS.",
+        "image_source": "Source: LaDépêche https://urlr.me/wSH9Xs "
+      },
+      {
+        "image_path": "images/image_castella_de_labarre_2.jfif",
+        "image_caption": "Building ruin (wall)",
+        "image_source": "Source: Photograph by Philippe Sablayrolles https://urlr.me/HsbF6T"
+      }
+    ]
+  },
+  {
+    "nom": "G.O Mètres Firm",
+    "dates": "July - August 2021",
+    "lieu": "Carbonne, Haute-Garonne (31), FRANCE",
+    "membres": null,
+    "type": "Professional Experience",
+    "statut": "Salaried technician",
+    "domaines": [
+      "Land/Cadastral",
+      "Surveying",
+      "CAD",
+      "Data Management",
+      "Project Management"
+    ],
+    "competences": [
+      "Land/Cadastral operations",
+      "Handling of surveying instruments",
+      "Data management, archiving, and referencing",
+      "Project Management",
+      "Ability to integrate quickly and benefit from the feedback of the Engineer managers"
+    ],
+    "description_mission": [
+      "Acquisition of professional experience as a surveyor's assistant for two months (July-August 2021) at the G.O METRES Firm.",
+      "Application and consolidation of knowledge and techniques learned during the 1st year of the BTS MGTMN and internship.",
+      "Execution of several land-related missions: boundary surveys and parcel divisions for various types of clients (individuals, developers, local authorities).",
+      "Reinforcement of the use of data acquisition tools: total stations and GNSS receivers.",
+      "Participation in Project Management affairs and management of document archiving and file referencing on Géofoncier."
+    ],
+    "materiels": [
+      "Trimble S9 Total Station",
+      "Trimble R6/R12 GNSS Receiver"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Covadis",
+      "Moduléo",
+      "Géofoncier"
+    ],
+    "latlon": [
+      43.297104,
+      1.2182919
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image_go_metre_1 (1).jpg",
+        "image_caption": "O.Castex",
+        "image_source": "Source: G.O Mètres https://urlr.me/q84yj5"
+      },
+      {
+        "image_path": "images/image_go_metre_2.jpg",
+        "image_caption": "J.DE MANDIARGUES, O.CASTEX, J.CORAN",
+        "image_source": "Source: G.O Mètres https://urlr.me/q84yj5"
+      }
+    ]
+  },
+  {
+    "nom": "Acti-Géo Firm",
+    "dates": "May - June 2021",
+    "lieu": "Toulouse, Haute-Garonne (31), FRANCE",
+    "type": "Professional Experience",
+    "statut": "Intern",
+    "domaines": [
+      "Bathymetry",
+      "3D Modeling",
+      "Photogrammetry",
+      "Surveying"
+    ],
+    "competences": [
+      "Implementation of surveying instruments",
+      "3D Modeling",
+      "Interior survey",
+      "Bathymetric survey",
+      "Photogrammetric survey",
+      "Photogrammetric processing",
+      "CAD",
+      "Project management",
+      "Land/Cadastral operations",
+      "Collaborative work",
+      "Ability to work safely"
+    ],
+    "description_mission": [
+      "Completion of a first-year internship (May-June 2021) at Acti-Géo Firm, directed by Mr. Laurent TASSEL, focused on new technologies.",
+      "Professional application of methods and tools acquired during training (BTS MGTMN).",
+      "Topographic surveys using a total station (Trimble S7) and a GNSS receiver (Trimble R8).",
+      "Data processing (Covadis, AutoCAD).",
+      "Participation in innovative missions involving the use of drones: bathymetric surveys of quarry lakes with the aqua-drone (WaterRobotics), georeferencing, and real-time trajectory tracking (RTK, Septentrio NR3, Qinsy).",
+      "Interior and facade surveys with a 3D scanner (Zoller+Fröhlich 5016) and data processing (Trimble Realworks, CloudCompare).",
+      "Photogrammetric survey with a DJI Mavic Pro drone and data processing (Agisoft Metashape) for the creation of orthoimages.",
+      "Acquisition of the principles of mission organization, from client request to deliverable submission.",
+      "Handling of data related to land operations and contribution to the establishment of land deeds (SPF, Géofoncier, Word)."
+    ],
+    "materiels": [
+      "Aqua-drone Water Robotics",
+      "Zoller+Fröhlich 5016 3D Scanner",
+      "Trimble S7 Total Station",
+      "Trimble R8 GNSS Receiver",
+      "Septentrio Altus NR3 Receiver",
+      "DJI Mavic Pro Drone"
+    ],
+    "softwares": [
+      "AutoCAD",
+      "Qinsy",
+      "Covadis",
+      "Agisoft Metashape",
+      "CloudCompare",
+      "Géofoncier"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      43.6303502,
+      1.4376583
+    ],
+    "images_data": [
+      {
+        "image_path": "images/image-actigeo_1.jpg",
+        "image_caption": "M.CASTET",
+        "image_source": "Source: Personal photograph"
+      },
+      {
+        "image_path": "images/image_actigeo_2.jpg",
+        "image_caption": "Aquadrone WaterRobotics, equipped with a Septentrio Altus NR3 GNSS receiver and a GoPro",
+        "image_source": "Source: Acti-Géo https://urlr.me/wZ8uJ9"
+      }
+    ]
+  },
+  {
+    "nom": "GILG Géomètre 81 Firm",
+    "dates": "March - July 2020",
+    "lieu": "Rabastens (81)",
+    "membres": null,
+    "type": "Professional Experience",
+    "statut": "Intern",
+    "domaines": [
+      "Surveying",
+      "Land/Cadastral",
+      "CAD"
+    ],
+    "competences": [
+      "Handling of surveying instruments",
+      "Topographic data processing",
+      "CAD",
+      "Land/Cadastral operations",
+      "Integration and Familiarization ability"
+    ],
+    "description_mission": [
+      "Introduction to the professional practices of a Chartered Surveyor following two discovery days (March 2020) at Mr. Franck GILG's firm.",
+      "Familiarization with the installation and handling of survey tools: total station and GNSS receiver.",
+      "Acquisition of the basics of the land domain and understanding of the mediation role inherent in the profession of Chartered Surveyor.",
+      "Processing and exploitation of acquired field data using the specialized software Covadis.",
+      "Introduction to drafting various plans in a Computer-Aided Design (CAD) environment on AutoCAD and to geodatabase processing (Covadis)."
+    ],
+    "materiels": [
+      "Total station",
+      "GNSS receiver"
+    ],
+    "softwares": [
+      "Covadis",
+      "AutoCAD",
+      "Géofoncier"
+    ],
+    "lien_pdf": null,
+    "latlon": [
+      43.823018,
+      1.7233592
+    ],
+    "images_data": []
+  }
+]
