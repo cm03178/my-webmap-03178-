@@ -24,25 +24,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
 
     <div id="auth-overlay">
         <div class="auth-box">
             <img src="./images/image_esgt.jpg" alt="Logo ESGT" class="auth-logo">
-            <h2>Portfolio Géomatique</h2>
-            <p>Veuillez entrer le mot de passe pour continuer.</p>
+            <h2 data-lang-key="portfolioTitle">Portfolio Géomatique</h2>
+            <p data-lang-key="passwordPrompt">Veuillez entrer le mot de passe pour continuer.</p>
             <form id="login-form">
                 <div class="input-group">
                     <i class="fa-solid fa-language"></i>
                     <select id="language-select">
                         <option value="fr">Français (FR)</option>
-                        <option value="en" disabled>English (EN) - Bientôt</option>
+                        <option value="en">English (EN)</option>
+                        <option value="es">Español (ES)</option>
                     </select>
                 </div>
                 <div class="input-group">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="password-input" placeholder="Mot de passe">
+                    <input type="password" id="password-input" placeholder="Mot de passe" data-lang-key="passwordPlaceholder">
                 </div>
                 <button type="submit" id="login-button">Entrer</button>
                 <p id="error-message">Mot de passe incorrect. Veuillez réessayer.</p>
@@ -54,65 +56,65 @@
 
         <div id="map"></div>
 
-        <div id="menu-icon" class="map-control-ui" title="Ouvrir le menu et les filtres">
+        <div id="menu-icon" class="map-control-ui" title="Ouvrir le menu et les filtres" data-lang-key="menuTitle">
             <i class="fa fa-bars"></i>
         </div>
 
         <div id="menu-panel">
             <div class="panel-header">
-                <h3>Menu & Filtres</h3>
-                <button id="menu-close-btn" class="close-btn" title="Fermer le menu"><i class="fa fa-times"></i></button>
+                <h3 data-lang-key="menuHeader">Menu & Filtres</h3>
+                <button id="menu-close-btn" class="close-btn" title="Fermer le menu" data-lang-key="closeMenuTitle"><i class="fa fa-times"></i></button>
             </div>
             <div class="panel-content">
                 
                 <section id="filter-section">
                     <div class="filter-accordion">
-                        <button class="accordion-header"><h4><i class="fa-solid fa-filter"></i> Filtrer par Statut</h4></button>
+                        <button class="accordion-header"><h4 data-lang-key="filterStatus"><i class="fa-solid fa-filter"></i> Filtrer par Statut</h4></button>
                         <div class="accordion-content">
                             <div id="statut-filter-container"></div>
                         </div>
                     </div>
                     <div class="filter-accordion">
-                        <button class="accordion-header"><h4><i class="fa-solid fa-star"></i> Filtrer par Compétences</h4></button>
+                        <button class="accordion-header"><h4 data-lang-key="filterSkills"><i class="fa-solid fa-star"></i> Filtrer par Compétences</h4></button>
                         <div class="accordion-content">
-                            <input type="text" id="competence-search" placeholder="Rechercher une compétence...">
+                            <input type="text" id="competence-search" placeholder="Rechercher une compétence..." data-lang-key="searchSkillPlaceholder">
                             <div id="competences-list"></div>
                         </div>
                     </div>
                     <div class="filter-accordion">
-                        <button class="accordion-header"><h4><i class="fa-solid fa-cogs"></i> Filtrer par Matériels</h4></button>
+                        <button class="accordion-header"><h4 data-lang-key="filterHardware"><i class="fa-solid fa-cogs"></i> Filtrer par Matériels</h4></button>
                         <div class="accordion-content">
-                            <input type="text" id="materiel-search" placeholder="Rechercher un matériel...">
+                            <input type="text" id="materiel-search" placeholder="Rechercher un matériel..." data-lang-key="searchHardwarePlaceholder">
                             <div id="materiels-list"></div>
                         </div>
                     </div>
                     <div class="filter-accordion">
-                        <button class="accordion-header"><h4><i class="fa-solid fa-code"></i> Filtrer par Logiciels</h4></button>
+                        <button class="accordion-header"><h4 data-lang-key="filterSoftware"><i class="fa-solid fa-code"></i> Filtrer par Logiciels</h4></button>
                         <div class="accordion-content">
-                            <input type="text" id="logiciel-search" placeholder="Rechercher un logiciel...">
+                            <input type="text" id="logiciel-search" placeholder="Rechercher un logiciel..." data-lang-key="searchSoftwarePlaceholder">
                             <div id="logiciels-list"></div>
                         </div>
                     </div>
 
-                    <button id="reset-filters-btn"><i class="fa-solid fa-rotate-left"></i> Réinitialiser les filtres</button>
+                    <button id="reset-filters-btn" data-lang-key="resetFilters"><i class="fa-solid fa-rotate-left"></i> Réinitialiser les filtres</button>
                 </section>
 
                 <hr>
 
                 <section id="about-section">
-                    <h4><i class="fa-solid fa-circle-info"></i> Informations</h4>
-                    <button id="about-btn" class="info-btn">À propos</button>
-                    <button id="legal-btn" class="info-btn">Mentions Légales</button>
+                    <h4 data-lang-key="information"><i class="fa-solid fa-circle-info"></i> Informations</h4>
+                    <button id="about-btn" class="info-btn" data-lang-key="about">À propos</button>
+                    <button id="legal-btn" class="info-btn" data-lang-key="legal">Mentions Légales</button>
                 </section>
             </div>
         </div>
 
         <div id="details-panel">
-            <button id="details-close-btn" class="close-btn" title="Fermer les détails"><i class="fa fa-times"></i></button>
+            <button id="details-close-btn" class="close-btn" title="Fermer les détails" data-lang-key="closeDetailsTitle"><i class="fa fa-times"></i></button>
             <div id="details-content">
                 <div class="placeholder">
                     <i class="fa-solid fa-hand-pointer"></i>
-                    <p>Cliquez sur un marqueur sur la carte pour afficher les détails d'une mission ou d'une formation.</p>
+                    <p data-lang-key="detailsPlaceholder">Cliquez sur un marqueur sur la carte pour afficher les détails d'une mission ou d'une formation.</p>
                 </div>
             </div>
         </div>
