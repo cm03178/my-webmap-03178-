@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         fr: {
             // Auth
-            portfolioTitle: "Portfolio Géomatique",
+            portfolioTitle: "WebMap - Portfolio",
             passwordPrompt: "Veuillez entrer le mot de passe pour continuer.",
             passwordPlaceholder: "Mot de passe",
             loginButton: "Entrer",
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             legalBody: `<p>Ce site est un portfolio personnel à but non-commercial.</p><p>L'accès à ce contenu est restreint. Les informations, données et documents présentés sur ce site sont la propriété intellectuelle de Manuel Castet et/ou des entités respectives mentionnées (écoles, entreprises, missions).</p><p>Toute reproduction, diffusion ou utilisation des contenus de ce site (données, images, code) sans autorisation préalable explicite est strictement interdite.</p><p>Les fonds de carte sont la propriété de leurs fournisseurs respectifs (OpenStreetMap, Esri, CartoDB, OpenTopoMap) et sont utilisés conformément à leurs licences.</p>`,
         },
         en: {
-            portfolioTitle: "Geomatics Portfolio",
+            portfolioTitle: "WebMap - Portfolio",
             passwordPrompt: "Please enter the password to continue.",
             passwordPlaceholder: "Password",
             loginButton: "Enter",
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             legalBody: `<p>This site is a personal, non-commercial portfolio.</p><p>Access to this content is restricted. The information, data, and documents presented on this site are the intellectual property of Manuel Castet and/or the respective entities mentioned (schools, companies, missions).</p><p>Any reproduction, distribution, or use of the contents of this site (data, images, code) without explicit prior authorization is strictly prohibited.</p><p>The basemaps are the property of their respective providers (OpenStreetMap, Esri, CartoDB, OpenTopoMap) and are used in accordance with their licenses.</p>`,
         },
         es: {
-            portfolioTitle: "Portfolio de Geomática",
+            portfolioTitle: "WebMap - Portfolio",
             passwordPrompt: "Por favor, introduzca la contraseña para continuar.",
             passwordPlaceholder: "Contraseña",
             loginButton: "Entrar",
@@ -215,9 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const authOverlay = document.getElementById('auth-overlay');
     const appContainer = document.getElementById('app-container');
     const loginForm = document.getElementById('login-form');
-    const passwordInput = document.getElementById('password-input');
     const languageSelect = document.getElementById('language-select');
-    const errorMessage = document.getElementById('error-message');
 
     languageSelect.addEventListener('change', (e) => {
         setLanguage(e.target.value);
@@ -226,45 +224,30 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
         currentLang = languageSelect.value;
-        
-        // Mot de passe codé en dur (comme demandé)
-        if (passwordInput.value === "ESGTCM25") {
-            // Cacher l'overlay
-            authOverlay.style.opacity = '0';
-            authOverlay.style.pointerEvents = 'none';
-            
-            // Afficher l'application
-            appContainer.style.display = 'block';
 
-            // Attendre la fin de la transition d'opacité
-            setTimeout(() => {
-                authOverlay.style.display = 'none';
-                // Initialiser la carte SEULEMENT après authentification réussie
-                initMap();
-            }, 500); // 500ms = durée de la transition CSS
-            
-        } else {
-            // Afficher le message d'erreur
-            errorMessage.style.display = 'block';
-            // Secouer la boîte (effet visuel)
-            document.querySelector('.auth-box').classList.add('shake');
-            setTimeout(() => {
-                document.querySelector('.auth-box').classList.remove('shake');
-            }, 300);
-        }
+        // Cacher l'overlay
+        authOverlay.style.opacity = '0';
+        authOverlay.style.pointerEvents = 'none';
+
+        // Afficher l'application
+        appContainer.style.display = 'block';
+
+        // Attendre la fin de la transition d'opacité
+        setTimeout(() => {
+            authOverlay.style.display = 'none';
+            // Initialiser la carte
+            initMap();
+        }, 500); // 500ms = durée de la transition CSS
     });
     
-    // Cache le message d'erreur si l'utilisateur recommence à taper
-    passwordInput.addEventListener('input', () => {
-        if (errorMessage.style.display === 'block') {
-            errorMessage.style.display = 'none';
-        }
-    });
+
 
 
     // --- 3. INITIALISATION DE LA CARTE (appelée après auth) ---
     function initMap() {
-        map = L.map('map').setView([46.603354, 1.888334], 6); // Centre sur la France
+        map = L.map('map', {
+            zoomControl: false // On désactive le contrôle de zoom par défaut
+        }).setView([46.603354, 1.888334], 6); // Centre sur la France
 
         // Définition des fonds de carte (Basemaps)
         const langTrans = translations[currentLang];
@@ -302,6 +285,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // --- 4. AJOUT DES CONTRÔLES LEAFLET ---
+
+        // Contrôle de Zoom (Haut-Droite)
+        L.control.zoom({ position: 'topright' }).addTo(map);
 
         // Sélecteur de couches (Haut-Droite)
         L.control.layers(basemaps, overlays).addTo(map);
